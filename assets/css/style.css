@@ -1,1321 +1,1168 @@
-:root {
-
-  --bg-wild-blue-yonder: hsla(216, 33%, 68%, 1);
-  --bg-carolina-blue: hsla(199, 89%, 49%, 1);
-  --bg-prussian-blue: hsla(216, 33%, 20%, 1);
-  --bg-oxford-blue: hsla(222, 44%, 13%, 1);
-  --bg-oxford-blue-2: hsla(222, 47%, 11%, 1);
-
-
-  --text-white: hsla(0, 0%, 100%, 1);
-  --text-alice-blue: hsla(216, 100%, 95%, 1);
-  --text-columbia-blue: hsla(199, 69%, 84%, 1);
-  --text-wild-blue-yonder: hsla(216, 33%, 68%, 1);
-  --text-carolina-blue: hsla(199, 89%, 49%, 1);
-  --text-shadow-blue: hsla(217, 24%, 59%, 1);
-  --text-slate-gray: hsla(217, 17%, 48%, 1);
-
-  /** Gradient colors */
-  --gradient-1: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%);
-  --gradient-2: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%, #0ea5ea);
-  --gradient-3: linear-gradient(0deg, #000d1a, transparent);
-
-  /** Border colors */
-  --border-wild-blue-yonder: hsla(216, 33%, 68%, 1);
-  --border-prussian-blue: hsla(216, 33%, 20%, 1);
-  --border-white: hsl(0, 0%, 100%);
-  --border-white-alpha-15: hsla(0, 0%, 100%, 0.15);
-
-  /** Default colors */
-  --white: hsl(0, 0%, 100%, 1);
-  --black: hsl(0, 0%, 0%, 1);
-
-  /**
-   * TYPOGRAPHY
-   */
-
-  /** Font family */
-  --fontFamily-noto_sans: 'Noto Sans', sans-serif;
-
-  /** Font size */
-  --fontSize-1: 2.9rem;
-  --fontSize-2: 2.0rem;
-  --fontSize-3: 1.8rem;
-  --fontSize-4: 1.6rem;
-  --fontSize-5: 1.5rem;
-  --fontSize-6: 1.4rem;
-  --fontSize-7: 1.2rem;
-  --fontSize-8: 1.3rem;
-
-  /** Font weight */
-  --weight-medium: 500;
-  --weight-semiBold: 600;
-  --weight-bold: 700;
-  --weight-extraBold: 800;
-
-  /** Line height */
-  --lineHeight-1: 1.3;
-  --lineHeight-2: 1.5;
-  --lineHeight-4: 1.5;
-
-  /**
-   * BOX SHADOW
-   */
-
-  --shadow-1: 0 8px 20px 0 hsla(0, 0%, 0%, 0.05);
-  --shadow-2: 0px 3px 20px hsla(180, 90%, 43%, 0.2);
-
-  /**
-   * BORDER RADIUS
-   */
-
-  --radius-6: 6px;
-  --radius-8: 8px;
-  --radius-16: 16px;
-  --radius-48: 48px;
-  --radius-circle: 50%;
-  --radius-pill: 200px;
-
-  /**
-   * SPACING
-   */
-
-  --section-padding: 70px;
-
-  /**
-   * TRANSITION
-   */
-
-  --transition-1: 0.25s ease;
-  --transition-2: 0.5s ease;
-  --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
-  --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
-
-}
-
-
-
-
-
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-li { list-style: none; }
-
-a,
-img,
-span,
-input,
-button,
-ion-icon { display: block; }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img { height: auto; }
-
-input,
-button {
-  background: none;
-  border: none;
-  font: inherit;
-  color: inherit;
-}
-
-input {
-  width: 100%;
-  outline: none;
-}
-
-button { cursor: pointer; }
-
-ion-icon { pointer-events: none; }
-
-address { font-style: normal; }
-
-html {
-  font-size: 10px;
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: var(--bg-oxford-blue-2);
-  color: var(--white);
-  font-family: var(--fontFamily-noto_sans);
-  font-size: 1.6rem;
-  line-height: var(--lineHeight-4);
-  overflow-y: overlay;
-}
-
-body.nav-active { overflow: hidden; }
-
-::-webkit-scrollbar { width: 5px; }
-
-::-webkit-scrollbar-track { background-color: transparent; }
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--bg-carolina-blue);
-  border-radius: var(--radius-pill);
-}
-
-.container { padding-inline: 16px; }
-
-.hover-1,
-.hover-2 { transition: var(--transition-1); }
-
-.hover-1:is(:hover, :focus-visible) { 
-  color: var(--text-wild-blue-yonder);
-  transform: translateX(3px);
-}
-
-.hover-2:is(:hover, :focus-visible) { color: var(--text-carolina-blue); }
-
-.profile-card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.profile-card .profile-banner { border-radius: var(--radius-circle); }
-
-.headline {
-  color: var(--text-white);
-  line-height: var(--lineHeight-1);
-}
-
-.headline-1 {
-  font-size: var(--fontSize-1);
-  color: var(--text-white);
-  font-weight: var(--weight-extraBold);
-}
-
-.headline-2 { font-size: var(--fontSize-2); }
-
-.headline-3 {
-  font-size: var(--fontSize-2);
-  line-height: var(--lineHeight-2);
-}
-
-.section-title { margin-block-end: 10px; }
-
-.headline .span {
-  background-image: var(--gradient-1);
-  display: inline-block;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
-.btn {
-  background-image: var(--gradient-2);
-  background-size: 200%;
-  background-position: left;
-  color: var(--white);
-  font-size: var(--fontSize-6);
-  font-weight: var(--weight-bold);
-  max-width: max-content;
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  transition: var(--transition-1);
-}
-
-.btn:is(:hover, :focus-visible) { background-position: right; }
-
-.btn-primary {
-  padding: 8px 16px;
-  border-radius: var(--radius-6);
-}
-
-.btn-secondary {
-  padding: 18px 30px;
-  border-radius: var(--radius-pill);
-}
-
-
-.card {
-  background-color: var(--bg-oxford-blue);
-  border: 1px solid var(--border-prussian-blue);
-}
-
-.img-holder {
-  aspect-ratio: var(--width) / var(--height);
-  background-color: var(--bg-prussian-blue);
-  overflow: hidden;
-}
-
-.img-cover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.section { padding-block: var(--section-padding); }
-
-.section-text {
-  font-size: var(--fontSize-3);
-  margin-block-end: 70px;
-}
-
-.grid-list {
-  display: grid;
-  gap: 30px;
-}
-
-.card-wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: center;
-  font-size: var(--fontSize-6);
-  margin-block: 20px;
-}
-
-.card-wrapper :is(.card-tag, .wrapper) {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-}
-
-
-.slider-title.slider-subtitle {
-    display: flex; /* Ative o flexbox para os elementos internos */
-    align-items: center; /* Alinhe os elementos verticalmente ao centro */
-}
-
-.slider-title.slider-subtitle  span.view-count {
-    margin-left: 10px; /* Adicione margem à esquerda para separar os elementos */
-}
-
-
-
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
-
-.header .btn { display: none; }
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-block: 24px;
-  background-color: var(--bg-oxford-blue-2);
-  z-index: 4;
-}
-
-.header.active {
-  padding-block: 8px;
-  box-shadow: var(--shadow-1);
-  border-block-end: 1px solid var(--bg-prussian-blue);
-  animation: slideIn 0.5s ease forwards;
-}
-
-@keyframes slideIn {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(0); }
-}
-
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-}
-
-.nav-open-btn,
-.nav-close-btn {
-  color: var(--text-wild-blue-yonder);
-  font-size: 3.5rem;
-}
-
-.navbar {
-  position: absolute;
-  top: 0;
-  right: -340px;
-  max-width: 340px;
-  width: 100%;
-  height: 100vh;
-  background-color: var(--bg-oxford-blue-2);
-  padding: 30px;
-  z-index: 2;
-  overflow-y: auto;
-  visibility: hidden;
-  transition: 0.25s var(--cubic-in);
-}
-
-.navbar.active {
-  transform: translateX(-340px);
-  visibility: visible;
-  transition: 0.5s var(--cubic-out);
-}
-
-.navbar-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-block-end: 15px;
-  margin-block-end: 15px;
-  border-block-end: 1px solid var(--border-prussian-blue);
-}
-
-.navbar-list { border-block-end: 1px solid var(--border-white-alpha-15); }
-
-.navbar-link {
-  color: var(--text-white);
-  font-weight: var(--weight-medium);
-  padding-block: 10px;
-}
-
-.navbar-bottom {
-  padding-block: 30px 20px;
-  margin-block: 20px 25px;
-  border-block: 1px solid var(--border-prussian-blue);
-}
-
-.navbar .profile-card { margin-block-end: 15px; }
-
-.navbar .profile-card .card-title {
-  color: var(--text-columbia-blue);
-  font-size: var(--fontSize-6);
-  font-weight: var(--weight-semiBold);
-}
-
-.navbar .profile-card .card-subtitle { font-size: var(--fontSize-7); }
-
-.navbar .link-list {
-  columns: 2;
-  -webkit-columns: 2;
-}
-
-.navbar-bottom-link {
-  color:  var(--text-white);
-  font-size: var(--fontSize-6);
-  padding-block: 6px;
-}
-
-.copyright-text {
-  color: var(--text-alice-blue);
-  font-size: var(--fontSize-8);
-}
-
-
-
-
-
-/*-----------------------------------*\
-  #HERO
-\*-----------------------------------*/
-
-.hero-bg { display: none; }
-
-.hero { padding-block-start: calc(var(--section-padding) + 160px); }
-
-.hero .container {
-  display: grid;
-  gap: 50px;
-}
-
-.hero-subtitle {
-  font-size: var(--fontSize-6);
-  font-weight: var(--weight-bold);
-}
-
-.hero .section-title { margin-block: 20px; }
-
-.hero .hero-text { margin-block-end: 40px; }
-
-.hero .input-wrapper:hover { box-shadow: var(--shadow-2); }
-
-.hero .input-wrapper {
-  position: relative;
-  padding: 10px;
-  padding-inline-start: 20px;
-  background-color: var(--bg-prussian-blue);
-  border-radius: var(--radius-6);
-  border: 1px solid var(--bg-carolina-blue);
-  display: flex;
-  justify-items: flex-end;
-  transition: var(--transition-1);
-}
-
-.hero .input-field { padding-inline-end: 5px; }
-
-.hero-banner { position: relative; }
-
-.hero-banner .w-100 {
-  max-width: max-content;
-  margin-inline: auto;
-}
-
-.hero .shape {
-  position: absolute;
-  z-index: -1;
-
-  animation: heroDecoAnim 3s linear infinite alternate;
-}
-
-@keyframes heroDecoAnim {
-  0% { transform: translateY(40px) rotate(0); }
-  100% { transform: translateY(0) rotate(0.4turn); }
-}
-
-.hero .shape-1 {
-  top: 50px;
-  right: 40px;
-}
-
-.hero .shape-2 {
-  bottom: 20px;
-  left: 24px;
-}
-
-
-
-
-
-/*-----------------------------------*\
-  #TOPICS
-\*-----------------------------------*/
-
-.topic-card {
-  padding: 24px;
-  border-radius: var(--radius-8);
-}
-
-.topic-card .card-content { margin-block-end: 15px; }
-
-.topic-card .card-text {
-  color: var(--text-wild-blue-yonder);
-  font-size: var(--fontSize-6);
-  margin-block: 15px 20px;
-}
-
-.btn-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.btn-icon {
-  width: 32px;
-  height: 32px;
-  display: grid;
-  place-items: center;
-  background: var(--bg-prussian-blue);
-  border-radius: var(--radius-circle);
-  color: var(--white);
-}
-
-.btn-icon:is(:hover, :focus-visible) { background: var(--gradient-1); }
-
-.slider {
-  --slider-items: 1;
-  overflow: hidden;
-}
-
-.slider-list {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  transition: transform var(--transition-2);
-}
-
-.slider-item { min-width: 100%; }
-
-.slider-card { position: relative; }
-
-.slider-card::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-image: var(--gradient-3);
-  border-radius: var(--radius-8);
-}
-
-.slider-list .slider-banner { border-radius: var(--radius-8); }
-
-.slider-content {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-}
-
-.slider-title {
-  color: var(--text-white);
-  font-weight: var(--weight-bold);
-  margin-block-end: 5px;
-  transition: var(--transition-1);
-}
-
-.slider-card:is(:hover, :focus-visible) .slider-title { color: var(--text-carolina-blue); }
-
-.slider-subtitle { font-size: var(--fontSize-7); }
-
-
-
-
-
-/*-----------------------------------*\
-  #FEATURED
-\*-----------------------------------*/
-
-.feature-bg { display: none; }
-
-.feature-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.feature-card {
-  padding: 20px;
-  border-radius: var(--radius-16);
-  transition: var(--transition-1);
-}
-
-.feature-card:is(:hover, :focus-within) { 
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-2);
-  background-image: linear-gradient(var(--bg-oxford-blue), var(--bg-oxford-blue)), var(--gradient-1);
-  background-clip: padding-box, border-box;
-  border-color: transparent;
-  transform: translateY(-2px);
-  transition: var(--transition-1);
- }
-
-.feature-card .card-banner { border-radius: var(--radius-16); }
-
-.feature-card .card-wrapper { margin-block-start: 24px; }
-
-.feature .profile-card :is(.card-title, .card-subtitle) { color: var(--text-white); }
-
-.feature .profile-card .card-title { font-weight: var(--weight-bold); }
-
-.feature .profile-card .card-subtitle,
-.feature .card-wrapper .card-btn { font-size: var(--fontSize-6); }
-
-.feature-card .card-wrapper:last-child {
-  font-size: var(--fontSize-4);
-  margin-block-end: 0;
-}
-
-.feature .card-wrapper .card-btn {
-  position: relative;
-  color: var(--text-wild-blue-yonder);
-  z-index: 1;
-}
-
-.feature .card-wrapper .card-btn::before {
-  content: "";
-  position: absolute;
-  top: -13px;
-  left: -20px;
-  width: 48px;
-  height: 48px;
-  background-color: var(--bg-oxford-blue-2);
-  border-radius: var(--radius-circle);
-  z-index: -1;
-}
-
-.feature .btn {
-  margin-inline: auto;
-  margin-block-start: 30px;
-}
-
-
-.wrapper {
-  display: flex;
-  align-items: center;
-  
-}
-
-.card-wrapper {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.card-title {
-  margin: 0; /* Remova margens padrão */
-}
-
-
-
-.card-subtitle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-left: auto;
-  
-}
-
-.card-date {
-  margin-right: 44.7px; /* Adicione espaço à direita do post-date */
-}
-
-
-.view-count {
-  font-weight: bold; /* Adicione estilos de fonte conforme necessário */
-  margin-left: 10px;
-  margin-right:auto;
-}
-
-
-
-/*-----------------------------------*\
-  #POPULAR TAGS
-\*-----------------------------------*/
-
-.tags .grid-list { grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); }
-
-.tag-btn {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 18px;
-  border-radius: var(--radius-16);
-}
-
-.tag-btn:is(:hover, :focus-visible) {
-  box-shadow: var(--shadow-2);
-  background-image: linear-gradient(var(--bg-oxford-blue), var(--bg-oxford-blue)), var(--gradient-1);
-  background-clip: padding-box, border-box;
-  border-color: transparent;
-  transform: translateY(-2px);
-  transition: var(--transition-1);
-}
-
-.tag-btn img {
-  width: 100%;
-  max-width: 32px;
-}
-
-
-
-
-
-/*-----------------------------------*\
-  #RECENT POST
-\*-----------------------------------*/
-
-.recent-post .container {
-  display: grid;
-  gap: 50px;
-}
-
-.recent-post-card {
-  display: grid;
-  gap: 30px;
-}
-
-.recent-post-card .card-banner {
-  border-radius: var(--radius-16);
-  transition: var(--transition-1);
-  
-}
-
-.recent-post-card:is(:hover, :focus-within) .card-banner {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-2);
-  background-image: linear-gradient(var(--bg-oxford-blue), var(--bg-oxford-blue)), var(--gradient-1);
-  background-clip: padding-box, border-box;
-  border-color: transparent;
-  transform: translateY(-2px);
-  transition: var(--transition-1);
-}
-
-.recent-post-card .card-text {
-  color: var(--text-wild-blue-yonder);
-  font-size: var(--fontSize-6);
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>May Blogger</title>
+  <meta name="title" content="Wren - Perosonal Blog Website">
+  <meta name="description" content="This is a blog html template made by codewithsadee">
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preload" as="image" href="./assets/images/pattern-2.svg">
+  <link rel="preload" as="image" href="./assets/images/pattern-3.svg">
+
+</head>
+
+
+
+<body id="top">
+  <header class="header" data-header>
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="./assets/images/may.png" width="119" height="37" alt="May logo">
+      </a>
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="./assets/images/may.png" width="219" height="57" alt="May logo">
+          </a>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+        <ul class="navbar-list">
+          <li>
+            <a href="#home" class="navbar-link hover-1" data-nav-toggler>Home</a>
+          </li>
+          <li>
+            <a href="#topics" class="navbar-link hover-1" data-nav-toggler>Tópicos</a>
+          </li>
+          <li>
+            <a href="#featured" class="navbar-link hover-1" data-nav-toggler>Linguagem de Programação</a>
+          </li>
+          <li>
+            <a href="#recent" class="navbar-link hover-1" data-nav-toggler>Posts Recentes</a>
+          </li>
+          <li>
+            <a href="#contact" class="navbar-link hover-1" data-nav-toggler>Contacto</a>
+          </li>
+        </ul>
+        <div class="navbar-bottom">
+          <div class="profile-card">
+            <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" alt="May"
+              class="profile-banner">
+            <div>
+              <p class="card-title">Mayarah Santos !</p>
+            </div>
+          </div>
+          <ul class="link-list">
+            <li>
+              <a href="https://www.linkedin.com/in/maiarasantos25/" class="navbar-bottom-link hover-1">Perfil</a>
+            </li>
+            <li>
+              <a href="https://github.com/MaiaraSanto" class="navbar-bottom-link hover-1">Artigos Salvos</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Adicionar nova postagem</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Meus Likes</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Configurações da conta</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Sair</a>
+            </li>
+          </ul>
+        </div>
+        <p class="copyright-text">
+          Copyright 2023 © Mayarah Santos - Blog Template.
+          Developed by codewithsadee
+        </p>
+      </nav>
+      <a href="#" class="btn btn-primary">Subscribe</a>
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+    </div>
+  </header>
+  <main>
+    <article>
+      <section class="hero" id="home" aria-label="home">
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-subtitle">Hello Everyone!</p>
+            <h1 class="headline headline-1 section-title">
+              I’m <span class="span">Mayarah </span>
+            </h1>
+            <p class="hero-text">
+              Bem-vindo ao May Blog, onde desbravamos o mundo da tecnologia,
+              oferecendo notícias, análises e tutoriais para todos, desde iniciantes até entusiastas,
+              enquanto exploramos o impacto da tecnologia em nosso futuro. Junte-se a nós
+              nesta jornada tecnológica!
+            </p>
+            <div class="input-wrapper">
+              <input type="email" name="email_address" placeholder="Type your email address" required
+                class="input-field" autocomplete="off">
+              <button class="btn btn-primary">
+                <span class="span">Subscribe</span>
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </div>
+          </div>
+          <div class="hero-banner">
+            <img src="./assets/images/tec.png" width="327" height="490" alt="Mayarah" class="w-100">
+            <img src="./assets/images/pattern-2.svg" width="27" height="26" alt="shape" class="shape shape-1">
+            <img src="./assets/images/pattern-3.svg" width="27" height="26" alt="shape" class="shape shape-2">
+          </div>
+          <img src="./assets/images/shadow-1.svg" width="500" height="800" alt="" class="hero-bg hero-bg-1">
+          <img src="./assets/images/shadow-2.svg" width="500" height="500" alt="" class="hero-bg hero-bg-2">
+        </div>
+        
+      </section><br><br>
+      <section class="topics" id="topics" aria-labelledby="topic-label">
+        <div class="container">
+            <div class="card topic-card">
+                <div class="card-content">
+                    <h2 class="headline headline-2 section-title card-title" id="topic-label">
+                        Tópicos Tecnológicos
+                    </h2>
+                    <p class="card-text" style="color: var(--text-white); text-align: justify;">
+                        Notícias importantes Tecnologia e outros assuntos correlacionados
+                    </p>
+                    <div class="btn-group">
+                        <button class="btn-icon" aria-label="previous" data-slider-prev>
+                            <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
+                        </button>
+                        <button class="btn-icon" aria-label="next" data-slider-next>
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="slider" data-slider>
+                  <ul class="slider-list" data-slider-container>
+                      
+                    <li class="slider-item" data-post-id="1">
+                          <a href="post.html?theme=Cyber" class="slider-card" data-clickable>
+                              <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                                  <img src="./assets/images/cyber.jpg" width="507" height="618" loading="lazy" alt="Cyber" class="img-cover">
+                              </figure>
+                              <div class="slider-content">
+                                  <span class="slider-title">Cyber</span>
+                              </div>
+                          </a>
+                          <h3 class="headline headline-3 card-title">
+                              <a href="post.html?theme=Cyber" class="link hover-2"></a>
+                          </h3>
+                          <p class="card-text" style="color: var(--text-white); margin-bottom: 10px;">
+                              A cibersegurança é crucial na era digital, protegendo sistemas e dados pessoais contra ameaças estranhas .
+                          </p><br>
+                          <div class="profile-card">
+                            <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                            <div>
+                              <p class="card-title">Mayarah S</p>
+                                <div class="card-subtitle">
+                                    <div class="card-date"><span class="post-date"></span></div>
+                                    <div class="wrapper">
+                                        <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 50px;"></ion-icon>
+                                        <span class="span"><p><span class="view-count" data-view-count="1">0</span></p></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                      </li>
+                      <li class="slider-item" data-post-id="2">
+                          <a href="post.html?theme=Figma" class="slider-card" data-clickable>
+                              <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                                  <img src="./assets/images/figma.jpg" width="507" height="618" loading="lazy" alt="Travel" class="img-cover">
+                              </figure>
+                              <div class="slider-content">
+                                  <span class="slider-title">Figma</span>
+                              </div>
+                          </a>
+                          <h3 class="headline headline-3 card-title">
+                              <a href="post.html?theme=Figma" class="link hover-2"></a>
+                          </h3>
+                          <p class="card-text" style="color: var(--text-white); margin-bottom: 10px;">
+                              O Figma é uma plataforma de design online que simplifica o processo de criação de interfaces digitais.
+                          </p><br>
+                          <div class="profile-card">
+                            <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                            <div>
+                              <p class="card-title">Mayarah S</p>
+                                <div class="card-subtitle">
+                                    <div class="card-date"><span class="post-date"></span></div>
+                                    <div class="wrapper">
+                                        <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 50px;"></ion-icon>
+                                        <span class="span"><p><span class="view-count" data-view-count="2">0</span></p></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                          
+                      </li>
+                      <li class="slider-item" data-post-id="3">
+                        <a href="post.html?theme=Scrum" class="slider-card" data-clickable>
+                            <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                                <img src="./assets/images/scrum.jpg" width="507" height="618" loading="lazy" alt="Scrum" class="img-cover">
+                            </figure>
+                            <div class="slider-content">
+                                <span class="slider-title">Scrum</span>                               
+                            </div>
+                        </a>
+                        <h3 class="headline headline-3 card-title">
+                            <a href="post.html?theme=Scrum" class="link hover-2"></a>
+                        </h3>
+                        <p class="card-text" style="color: var(--text-white); margin-bottom: 10px;">
+                            Scrum é um framework ágil utilizado para gerenciamento de projetos na área da tecnologia.
+                        </p><br>
+                        <div class="profile-card">
+                          <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                          <div>
+                            <p class="card-title">Mayarah S</p>
+                              <div class="card-subtitle">
+                                  <div class="card-date"><span class="post-date"></span></div>
+                                  <div class="wrapper">
+                                      <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 50px;"></ion-icon>
+                                      <span class="span"><p><span class="view-count" data-view-count="3">0</span></p></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </li>
+        
+                    <li class="slider-item" data-post-id="4">
+                        <a href="post.html?theme=GPS" class="slider-card" data-clickable>
+                            <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                                <img src="./assets/images/gps.jpg" width="507" height="618" loading="lazy" alt="GPS" class="img-cover">
+                            </figure>
+                            <div class="slider-content">
+                                <span class="slider-title">GPS</span>                              
+                            </div>
+                        </a>
+                        <h3 class="headline headline-3 card-title">
+                            <a href="post.html?theme=GPS" class="link hover-2"></a>
+                        </h3>
+                        <p class="card-text" style="color: var(--text-white); margin-bottom: 10px;">
+                            O GPS é uma tecnologia para navegação e localização. Saiba como funciona e onde é aplicado.
+                        </p><br>
+                        <div class="profile-card">
+                          <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                          <div>
+                            <p class="card-title">Mayarah S</p>
+                              <div class="card-subtitle">
+                                  <div class="card-date"><span class="post-date"></span></div>
+                                  <div class="wrapper">
+                                      <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 50px;"></ion-icon>
+                                      <span class="span"><p><span class="view-count" data-view-count="4">0</span></p></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </li>
+        
+                   
+                    <li class="slider-item" data-post-id="5">
+                        <a href="post.html?theme=LGPD" class="slider-card" data-clickable>
+                            <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                                <img src="./assets/images/lgpd.png" width="507" height="618" loading="lazy" alt="LGPD" class="img-cover">
+                            </figure>
+                            <div class="slider-content">
+                                <span class="slider-title">LGPD</span>                               
+                            </div>
+                        </a>
+                        <h3 class="headline headline-3 card-title">
+                            <a href="post.html?theme=LGPD" class="link hover-2"></a>
+                        </h3>
+                        <p class="card-text" style="color: var(--text-white); margin-bottom: 10px;">
+                            LGPD: uma legislação que regula o tratamento de dados pessoais. Entenda seus princípios e impactos.
+                        </p><br>
+                        <div class="profile-card">
+                          <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                          <div>
+                            <p class="card-title">Mayarah S</p>
+                              <div class="card-subtitle">
+                                  <div class="card-date"><span class="post-date"></span></div>
+                                  <div class="wrapper">
+                                      <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 50px;"></ion-icon>
+                                      <span class="span"><p><span class="view-count" data-view-count="5">0</span></p></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section feature" aria-label="feature" id="featured">
+        <div class="container">
+          <h2 class="headline headline-2 section-title">
+            <span class="span">Tecnologias em alta</span>
+          </h2>
+          <p class="section-text">
+            Artigos em destaque sobre o mundo da Programação
+          </p>
+          <ul class="feature-list">
+            <li>
+              <div class="card feature-card" data-post-id="6" data-clickable>
+                <a href="post.html?theme=Front-end" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/frontend.webp" width="1602" height="903" loading="lazy" alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=Front-end" class="span hover-2">#Front End</a>
+                            <a href="post.html?theme=Front-end" class="span hover-2">#Java Script</a>
+                        </div>
+                        <div class="wrapper">
+                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+    
+                          <span class="span">6 mins read</span>
+                        </div>
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=Front-end" class="card-title hover-2">O front-end: interface de usuário e interação em sistemas e aplicativos.</a>
+                    </h3><br>
+                    <p class="card-text">
+                        O front-end, também conhecido como a "parte visível" de um site ou aplicativo, engloba o design, layout e elementos interativos que os usuários veem e usam
+                    </p>
+                    <div class="card-wrapper">
+                    <div class="profile-card">
+                      <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                      <div>
+                        <p class="card-title">Mayarah S</p>
+                          <div class="card-subtitle">
+                              <div class="card-date"><span class="post-date"></span></div>
+                              </a>
+                              </div>
+                              
+                          </div> 
+                                            
+                        </div>
+                        <a href="#">
+                          <div class="wrapper">
+                            <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                              <span class="span"><p><span class="view-count" data-view-count="6">0</span></p></span>
+                            </div>
+                           </a>
+                  </div>
+                  
+                </div>
+            </div>
+            
+            </li>
+
+            <li>
+              <div class="card feature-card" data-post-id="7" data-clickable>
+                <a href="post.html?theme=Back-end" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/front-end.webp" width="1602" height="903" loading="lazy" alt="Back-end Development" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=Back-end" class="span hover-2">#Back End</a>
+                            <a href="post.html?theme=Back-end" class="span hover-2">#Desenvolvimento Web</a>
+                        </div>
+                        <div class="wrapper">
+                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+    
+                          <span class="span">6 mins read</span>
+                        </div>
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=Back-end" class="card-title hover-2">Desenvolvimento Back-end: O lado oculto da web.</a>
+                    </h3><br>
+                    <p class="card-text">
+                        O desenvolvimento back-end lida com a lógica, os servidores e o armazenamento de dados que tornam as aplicações web possíveis.
+                    </p>
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                        <div>
+                          <p class="card-title">Mayarah S</p>
+                            <div class="card-subtitle">
+                                <div class="card-date"><span class="post-date"></span></div>
+                                
+                                </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                       <a href="#">
+                                <div class="wrapper">
+                                  <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                                    <span class="span"><p><span class="view-count" data-view-count="7">0</span></p></span>
+                                  </div>
+                                 </a>
+                </div>
+            </div>
+            
+            </li>
+
+            <li>
+              <div class="card feature-card" data-post-id="8" data-clickable>
+                <a href="post.html?theme=Tecnologia" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/inovacao.jpg" width="1602" height="903" loading="lazy" alt="Tecnologia e Inovação" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=Tecnologia" class="span hover-2">#Tecnologia</a>
+                            <a href="post.html?theme=Tecnologia" class="span hover-2">#Inovação</a>
+                        </div>                       
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=Tecnologia" class="card-title hover-2">Tecnologia e inovação impulsionam a sociedade.</a>
+                    </h3><br>
+                    <p class="card-text">
+                      Tecnologia e inovação impulsionam a evolução e os desafios na área tecnológica. trazendo novas soluções e desafios.
+                    </p>
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                        <div>
+                          <p class="card-title">Mayarah S</p>
+                            <div class="card-subtitle">
+                                <div class="card-date"><span class="post-date"></span></div>
+                               </a>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                          <div class="wrapper">
+                            <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                              <span class="span"><p><span class="view-count" data-view-count="8">0</span></p></span>
+                            </div>
+                           </a>
+                </div>
+            </div>
+            
+            </li>
+            <li>
+              <div class="card feature-card" data-post-id="9" data-clickable>
+                <a href="post.html?theme=DataScience" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/datascience.jpg" width="1602" height="903" loading="lazy" alt="Analytics" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=DataScience" class="span hover-2">#Analytics</a>
+                            <a href="post.html?theme=DataScience" class="span hover-2">#Business</a>
+                        </div>                      
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=DataScience" class="card-title hover-2">Data science: informação para decisões</a>
+                    </h3><br>
+                    <p class="card-text">
+                      Data Science, tem seu seu papel crítico na análise de informações e na tomada de decisões estratégicas, moldando o futuro dos negócios e da tecnologia.
+                    </p>
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                        <div>
+                          <p class="card-title">Mayarah S</p>
+                            <div class="card-subtitle">
+                                <div class="card-date"><span class="post-date"></span></div>
+                                </a>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                          <div class="wrapper">
+                            <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                              <span class="span"><p><span class="view-count" data-view-count="9">0</span></p></span>
+                            </div>
+                           </a>
+                </div>
+            </div>
+            
+            </li>
+            <li>
+              <div class="card feature-card" data-post-id="12" data-clickable>
+                <a href="post.html?theme=Redes" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/redes.jpg" width="1602" height="903" loading="lazy" alt="Computadores" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=Redes" class="span hover-2">#Computadores</a>
+                            <a href="post.html?theme=Redes" class="span hover-2">#Rede</a>
+                        </div>                        
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=Redes" class="card-title hover-2">Redes de computadores e suas aplicações essenciais..</a>
+                    </h3><br>
+                    <p class="card-text">
+                      Redes são estruturas interconectadas que desempenham um papel fundamental na comunicação, dispositivos e sistemas compartilhados.
+                    </p>
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                        <div>
+                          <p class="card-title">Mayarah S</p>
+                            <div class="card-subtitle">
+                                <div class="card-date"><span class="post-date"></span></div>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                          <div class="wrapper">
+                            <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                              <span class="span"><p><span class="view-count" data-view-count="12">0</span></p></span>
+                            </div>
+                           </a>
+                </div>
+            </div>
+            
+            </li>
+
+
+            <li>
+              <div class="card feature-card" data-post-id="13" data-clickable>
+                <a href="post.html?theme=Internet" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/internet.jpg" width="1602" height="903" loading="lazy" alt="Internet e Redes Sociais" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=Internet" class="span hover-2">#Internet</a>
+                            <a href="post.html?theme=Internet" class="span hover-2">#Redes Sociais</a>
+                        </div>                        
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=Internet" class="card-title hover-2">Internet e redes sociais: conexão global</a>
+                    </h3><br>
+                    <p class="card-text">
+                      Internet e redes sociais moldam nossa sociedade, influenciando nossa comunicação, informações e conexões globais.
+                    </p>
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                        <div>
+                          <p class="card-title">Mayarah S</p>
+                            <div class="card-subtitle">
+                                <div class="card-date"><span class="post-date"></span></div>
+                                </a>
+                              
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                          <div class="wrapper">
+                            <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                              <span class="span"><p><span class="view-count" data-view-count="13">0</span></p></span>
+                            </div>
+                           </a>
+                </div>
+            </div>
+            
+            </li>
+
+            <li>
+              <div class="card feature-card" data-post-id="14" data-clickable>
+                <a href="post.html?theme=IA" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/IA.jpg" width="1602" height="903" loading="lazy" alt="IA ChatGPT" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=IA" class="span hover-2">#IA</a>
+                            <a href="post.html?theme=IA" class="span hover-2">#ChatGPT</a>
+                        </div>                       
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=IA" class="card-title hover-2">A Inteligência Artificial está revolucionando o futuro.</a>
+                    </h3><br>
+                    <p class="card-text">
+                      A Inteligência Artificial (IA) está redefinindo setores e promovendo avanços tecnológicos, transformando a maneira como vivemos e trabalhamos.
+                    </p>
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                        <div>
+                          <p class="card-title">Mayarah S</p>
+                            <div class="card-subtitle">
+                                <div class="card-date"><span class="post-date"></span></div>
+                                </a>
+                               
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                          <div class="wrapper">
+                            <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                              <span class="span"><p><span class="view-count" data-view-count="14">0</span></p></span>
+                            </div>
+                           </a>
+                </div>
+            </div>
+            
+            </li>
+
+            <li>
+              <div class="card feature-card" data-post-id="15" data-clickable>
+                <a href="post.html?theme=Mobile" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/mobile.webp" width="1602" height="903" loading="lazy" alt="Apps Mobile" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=Mobile" class="span hover-2">#Apps</a>
+                            <a href="post.html?theme=Mobile" class="span hover-2">#Mobile</a>
+                        </div>                       
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=Mobile" class="card-title hover-2">Descubra o impacto da tecnologia móvel no cotidiano.</a>
+                    </h3><br>
+                    <p class="card-text">
+                      A tecnologia móvel está mudando como vivemos e trabalhamos, tornando-se indispensável e promovendo conectividade em nosso cotidiano
+                    </p>
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                        <div>
+                          <p class="card-title">Mayarah S</p>
+                            <div class="card-subtitle">
+                                <div class="card-date"><span class="post-date"></span></div>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                          <div class="wrapper">
+                            <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                              <span class="span"><p><span class="view-count" data-view-count="15">0</span></p></span>
+                            </div>
+                           </a>
+                </div>
+            </div>
+            
+            </li>
+
+          </ul>
+
+          <a href="#" class="btn btn-secondary">
+            <span class="span">Show More Posts</span>
+
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+
+        <img src="./assets/images/shadow-3.svg" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
+
+      </section>
+
+
+
+      <section class="tags" aria-labelledby="tag-label">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title" id="tag-label">
+            <span class="span">Tags Populares</span>
+          </h2>
+
+          <p class="section-text">
+            Palavras-chave mais procuradas
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/tecnologia.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Travel">
+
+                <p class="btn-text">Stacks</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/software.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Culture">
+
+                <p class="btn-text">Software</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/dev.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Lifestyle">
+
+                <p class="btn-text">Dev</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/IA.jpg" style="border-radius: 100px;" width="32" height="32px" loading="lazy" alt="Fashion">
+
+                <p class="btn-text">IA</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/datascience.jpg" style="border-radius: 100px;" style="border-radius: 100px;" width="32" height="32px" loading="lazy" alt="Food">
+
+                <p class="btn-text">Business</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/js.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Space">
+
+                <p class="btn-text">JS</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/internet.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Animal">
+
+                <p class="btn-text">Internet</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/frontend.webp" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Minimal">
+
+                <p class="btn-text">API</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/redes.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Interior">
+
+                <p class="btn-text">Redes</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/bi.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Plant">
+
+                <p class="btn-text">BI</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/git.png" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Nature">
+
+                <p class="btn-text">Github</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/redes.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Business">
+
+                <p class="btn-text">Redes</p>
+              </button>
+            </li>
+
+          </ul>
+
+        </div>
+      </section><br><br><br><br>
+
+      
+      <section class="topics" id="topics" aria-labelledby="topic-label">
+        <div class="container">
+
+        </div>
+        </section>
+      
+        <section class="tags" aria-labelledby="tag-label" id="recent">
+        <div class="container">
+            <h2 class="headline headline-2 section-title" id="tag-label">
+                <span class="span">Posts recentes</span>
+            </h2>
+            <p class="section-text">
+                Dicas úteis de como trabalhar com Tecnologia
+            </p>
+            <ul class="grid-list grid-l">
+                <li class="li">
+                    <button class="card feature-card card-f" data-post-id="16" data-clickable>
+                        <div class="card-content">
+                            <a href="post.html?theme=Trabalho">
+                                <figure class="card-banner cardb1 img-holder" style="width: 371; height: 258;">
+                                    <img src="./assets/images/recent-post-1.jpg" style="width: 160px;"
+                                        alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                                </figure>
+                                <h3 class="headline headline-3 card-title cardt"><br>
+                                    <a href="post.html?theme=Trabalho" class="link hover-2">Trabalhando com Tecnologia</a>
+                                </h3>
+                            </a>
+                            <div class="card-wrapper">
+                                <div class="card-tag">
+                                    <p class="card-subtitle card-s"><p class="card-date card-d"><span class="post-date"></span></p>
+                                    <div class="wrapper wr">
+                                        <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 10px;"></ion-icon>
+                                        <span class="span"><p><span class="view-count" data-view-count="16">0</span></p></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </li>
+
+                <li class="li">
+                  <button class="card feature-card card-f" data-post-id="17" data-clickable>
+                      <div class="card-content">
+                          <a href="post.html?theme=Codigo">
+                              <figure class="card-banner cardb1 cardb1 img-holder" style="--width: 271; --height: 258;">
+                                  <img src="./assets/images/recent-post-2.jpg" style="width: 160px;" loading="lazy"
+                                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                              </figure>
+                              <h3 class="headline headline-3 card-title cardt"><br>
+                                  <a href="post.html?theme=Codigo" class="link hover-2">Desenvolva um código limpo</a>
+                              </h3>
+                          </a>
+                          <div class="card-wrapper">
+                              <div class="card-tag">
+                                  <p class="card-subtitle card-s"><p class="card-date card-d"><span class="post-date"></span></p>
+                                  <div class="wrapper wr">
+                                      <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left:10px"></ion-icon>
+                                      <span class="span"><p><span class="view-count" data-view-count="17">0</span></p></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </button>
+              </li>
+              
+            <li class="li">
+              <button class="card feature-card card-f" data-post-id="18" data-clickable>
+                <div class="card-content">
+                  <a href="post.html?theme=Remoto">
+                  <figure class="card-banner cardb1 img-holder" style="--width: 271; --height: 258;">
+                    <img src="./assets/images/recent-post-3.jpg" style="width: 160px;" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+                 
+                  <h3 class="headline headline-3 card-title cardt"><br>
+                    
+                    <a href="post.html?theme=Remoto" class="link hover-2">Trabalho em TI no Exterior</a>
+                  </h3>
+                </a>
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <p class="card-subtitle card-s"><p class="card-date card-d"><span class="post-date"></span></p>
+                      <div class="wrapper wr">
+                        <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 10px;"></ion-icon>
+                        <span class="span"><p><span class="view-count" data-view-count="18">0</span></p></span>
+                      </div>
+                    </div>
+                    </div>
+                
+</div>
+
+          
+              </button>
+            </li>
+
+            <li class="li">
+              <button class="card feature-card card-f" data-post-id="19" data-clickable>
+                <div class="card-content">
+                  <a href="post.html?theme=Grupo">
+                  <figure class="card-banner cardb1 img-holder" style="--width: 271; --height: 258;">
+                    <img src="./assets/images/recent-post-4.jpg" style="width: 160px;" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <h3 class="headline headline-3 card-title cardt"><br>
+                  
+                    <a href="post.html?theme=Grupo" class="link hover-2">Trabalho em Grupo e Colaboração</a>
+                  </h3>
+                </a>
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <p class="card-subtitle card-s"><p class="card-date card-d"><span class="post-date"></span></p>
+                      <div class="wrapper wr">
+                        <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 10px;"></ion-icon>
+                        <span class="span"><p><span class="view-count" data-view-count="19">0</span></p></span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </button>
+            </li>
+
+            <li class="li">
+              <button class="card feature-card card-f" data-post-id="20" data-clickable>
+                <div class="card-content">
+                  <a href="post.html?theme=Salario">
+                  <figure class="card-banner cardb1 img-holder" style="--width: 271; --height: 258;">
+                    <img src="./assets/images/recent-post-5.jpg" style="width: 160px;" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <h3 class="headline headline-3 card-title cardt"><br>
+
+                    <a href="post.html?theme=Salario" class="link hover-2">Salário de um desenvoledor</a>
+                  </h3>
+                </a>
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <p class="card-subtitle card-s"><p><p class="card-date card-d"><span class="post-date"></span></p>
+                      <div class="wrapper wr">
+                        <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 9px;"></ion-icon>
+                        <span class="span"><p><span class="view-count" data-view-count="20">0</span></p></span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </button>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+      <section class="section recent-post" id="recent" aria-labelledby="recent-label">
+
+      </section>
+      
+
+    
  
-}
-
-.recent-post-card .card-badge {
-  background-color: var(--bg-prussian-blue);
-  max-width: max-content;
-  color: var(--text-white);
-  font-size: var(--fontSize-8);
-  font-weight: var(--weight-bold);
-  padding: 4px 15px;
-  border-radius: var(--radius-pill);
-  transition: var(--transition-1);
-  
- 
-}
-
-.recent-post-card .card-badge:is(:hover, :focus-visible),
-.pagination-btn:is(:hover, :focus-visible) {
-  transform: translateY(-2px);
-  background-color: var(--bg-carolina-blue);
-  box-shadow: var(--shadow-2);
-  background-image: linear-gradient(var(--bg-oxford-blue), var(--bg-oxford-blue)), var(--gradient-1);
-  background-clip: padding-box, border-box;
-  border-color: transparent;
-  transform: translateY(-2px);
-  transition: var(--transition-1);
-  
-}
-
-
-
-
-
-.recent-post-card .card-wrapper ion-icon {
-  font-size: 1.8rem;
-  --ionicon-stroke-width: 40px;
-}
-
-.pagination-btn {
-  background-color: var(--bg-prussian-blue);
-  color: var(--text-white);
-  font-weight: var(--weight-bold);
-  line-height: 1;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  place-items: center;
-  border-radius: var(--radius-circle);
-  transition: var(--transition-1);
-}
-
-
-/*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
-
-.footer {
-  padding-inline: 20px;
-  border-radius: var(--radius-48);
-  color: var(--text-wild-blue-yonder);
-  margin-block-end: 24px;
-}
-
-.footer-top {
-  display: grid;
-  gap: 20px;
-}
-
-.footer-brand .footer-text { font-size: var(--fontSize-6); }
-
-.footer-text:not(.address) { margin-block: 20px; }
-
-.footer-brand .footer-list-title { margin-block-end: 2px; }
-
-.footer-list-title {
-  color: var(--text-columbia-blue);
-  font-size: var(--fontSize-3);
-  margin-block-end: 30px;
-}
-
-.footer-list ul { columns: 2; }
-
-.footer-link { margin-block-end: 12px; }
-
-.footer .input-wrapper {
-  position: relative;
-  margin-block-end: 24px;
-}
-
-.footer .input-field {
-  padding: 12px;
-  padding-inline-start: 20px;
-  border-block-end: 1px solid var(--text-wild-blue-yonder);
-  font-size: var(--fontSize-6);
-}
-
-.footer .input-field::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.5;
-}
-
-.footer .input-wrapper ion-icon {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  --ionicon-stroke-width: 40px;
-}
-
-.footer-bottom {
-  border-block-start: 1px solid var(--border-prussian-blue);
-  padding-block: 50px;
-}
-
-.copyright {
-  text-align: center;
-  margin-block-end: 15px;
-}
-
-.copyright-link {
-  display: inline-block;
-  color: var(--text-carolina-blue);
-  font-style: italic;
-}
-
-.social-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: var(--transition-1);
-}
-
-.social-link:is(:hover, :focus-visible) {
-  color: var(--text-carolina-blue);
-  transform: translateY(-2px);
-}
-
-/*-----------------------------------*\
-  #BACK TO TOP
-\*-----------------------------------*/
-
-.back-top-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: var(--bg-prussian-blue);
-  color: var(--white);
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius-circle);
-  border: 3px solid var(--bg-carolina-blue);
-  transition: var(--transition-1);
-  visibility: hidden;
-  opacity: 0;
-  z-index: 4;
-}
-
-.back-top-btn:is(:hover, :focus-visible) { box-shadow: var(--shadow-2); }
-
-.back-top-btn.active {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(-10px);
-}
-
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/
 
-/**
- * responsive for large than 575px screen
- */
 
-@media (min-width: 575px) {
 
-  /**
-   * CUSTOM PROPERTY
-   */
 
-  :root {
 
-    /**
-     * typography
-     */
+  <!-- 
+    - #FOOTER
+  -->
 
-    /* font size */
-    --fontSize-1: 4.4rem;
-    --fontSize-2: 3.5rem;
+  <footer style="margin-top: -11rem;">
+    <div class="container" id="contact">
 
-    /**
-     * spacing
-     */
+      <div class="card footer">
 
-    --section-padding: 100px;
+        <div class="section footer-top">
 
-  }
+          <div class="footer-brand">
 
+            <a href="#" class="logo">
+              <img src="./assets/images/may.png" width="189" height="57" loading="lazy" alt="Wren logo">
+            </a>
 
+            <p class="footer-text">
+              Este blog é dedicado a manter você atualizado sobre as tendências mais recentes em tecnologia, análises de
+              produtos, dicas e truques, e muito mais. 
+            </p>
 
-  /**
-   * REUSED STYLE
-   */
+            <p class="footer-list-title">Endereço</p>
 
-  .container {
-    max-width: 540px;
-    width: 100%;
-    margin-inline: auto;
-  }
+            <address class="footer-text address">
+              Avenida Presidente Kennedy, 783 <br>
+              Tucano, Bahia, Brasil
+            </address>
 
-  .headline-3 { --fontSize-2: 2.4rem; }
+          </div>
 
+          <div class="footer-list">
 
+            <p class="footer-list-title">tecnologia</p>
 
-  /**
-   * HEADER
-   */
+            <ul>
 
-  .header .btn {
-    display: block;
-    margin-inline-start: auto;
-  }
+              <li>
+                <a href="#" class="footer-link hover-2">Redes</a>
+              </li>
 
-  .header.active { padding-block: 20px; }
+              <li>
+                <a href="#" class="footer-link hover-2">Linguagem</a>
+              </li>
 
-/* Estilos padrão para telas maiores */
-.card-subtitle {
-  display: flex;
-  align-items: center;
-}
+              <li>
+                <a href="#" class="footer-link hover-2">Scrum</a>
+              </li>
 
-.card-date {
-  margin-right: 10px; /* Espaçamento entre o post-date e o view-count */
-}
+              <li>
+                <a href="#" class="footer-link hover-2">IA</a>
+              </li>
 
-ion-icon {
-  font-size: 20px;
-  margin-left: 10px; /* Espaçamento entre o ícone e o view-count */
-}
+              <li>
+                <a href="#" class="footer-link hover-2">Developer</a>
+              </li>
 
+              <li>
+                <a href="#" class="footer-link hover-2">Programação</a>
+              </li>
 
+              <li>
+                <a href="#" class="footer-link hover-2">Stacks</a>
+              </li>
 
-  /**
-   * HERO
-   */
+              <li>
+                <a href="#" class="footer-link hover-2">Front End</a>
+              </li>
 
-  .hero { position: relative; }
+              <li>
+                <a href="#" class="footer-link hover-2">Back-End</a>
+              </li>
 
-  .hero .input-wrapper { max-width: 390px; }
+              <li>
+                <a href="#" class="footer-link hover-2">Design</a>
+              </li>
 
-  .hero-bg {
-    display: block;
-    position: absolute;
-    pointer-events: none;
-  }
+              <li>
+                <a href="#" class="footer-link hover-2">Figma</a>
+              </li>
 
-  .hero-bg-1 {
-    top: 80px;
-    left: 0;
-  }
+              <li>
+                <a href="#" class="footer-link hover-2">Git</a>
+              </li>
 
-  .hero-bg-2 {
-    bottom: -200px;
-    left: -20px;
-  }
+            </ul>
 
-  .shape-2 { left: 60px; }
+          </div>
 
+          <div class="footer-list">
 
+            <p class="footer-list-title">Newsletter</p>
 
-  /**
-   * TOPICS
-   */
+            <p class="footer-text">
+              Inscreva-se para ser o primeiro a receber as últimas histórias que nos inspiram, estudos de caso e
+              notícias da área.
+            </p>
 
-  .topics .section-title { font-size: 2rem; }
+            <div class="input-wrapper">
+              <input type="text" name="name" placeholder="Nome completo" required class="input-field"
+                autocomplete="off">
 
-  .slider { --slider-items: 3; }
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+            </div>
 
-  .slider-item { min-width: calc(33.33% - 13.33px); }
+            <div class="input-wrapper">
+              <input type="email" name="Endereço" placeholder="Emaill address" required class="input-field"
+                autocomplete="off">
 
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            </div>
 
+            <a href="#" class="btn btn-primary">
+              <span class="span">Subscribe</span>
 
-  /**
-   * FEATURE
-   */
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
 
-  .feature { position: relative; }
+          </div>
 
-  .feature-bg {
-    display: block;
-    position: absolute;
-    top: -100px;
-    right: 0;
-    pointer-events: none;
-  }
+        </div>
 
+        <div class="footer-bottom" >
 
+          <p class="copyright">
+            &copy; Developed by <a href="#" class="copyright-link">Mayarah Santos.</a>
+          </p>
 
-  /**
-   * RECENT POST
-   */
+          <ul class="social-list">
+            
+            <li>
+              <a href="https://api.whatsapp.com/send?phone=5575991050049&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20contigo." class="social-link">
+                <ion-icon style="color: green;" name="logo-whatsapp"></ion-icon>
 
-  .recent-post-card {
-    grid-template-columns: 0.5fr 1fr;
-    gap: 20px;
-  }
+                <span class="span">Whatsapp</span>
+              </a>
+            </li>
 
-  .pagination-btn {
-    width: 42px;
-    height: 42px;
-  }
+            <li>
+              <a href="https://github.com/MaiaraSanto" class="social-link">
+                <ion-icon style="color: black;" name="logo-github"></ion-icon>
 
+                <span class="span">Github</span>
+              </a>
+            </li>
 
+            <li>
+              <a href="https://www.linkedin.com/in/maiarasantos25/" class="social-link">
+                <ion-icon style="color: rgb(4, 103, 160);" name="logo-linkedin"></ion-icon>
 
-  /**
-   * ASIDE
-   */
+                <span class="span">Linkedin</span>
+              </a>
+            </li>
 
-  .aside-title { --fontSize-2: 2rem; }
+          </ul>
 
-  /* Estilos para telas menores, usando uma Media Query */
+        </div>
 
-/* Estilos para telas menores, usando uma Media Query */
+      </div>
 
+    </div>
+  </footer>
+</div>
+</article>
 
+</main>
 
-}
 
+  <!-- 
+    - #BACK TO TOP
+  -->
 
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+  </a>
 
 
 
-/**
- * responsive for large than 768px screen
- */
 
-@media (min-width: 768px) {
 
-  /**
-   * CUSTOM PROPERTY
-   */
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./post.php"></script>
 
-  :root {
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    /**
-     * typography
-     */
+</body>
 
-    /* font size */
-    --fontSize-1: 6.4rem;
-    --fontSize-2: 4.5rem;
-
-  }
-
-
-
-  /**
-   * REUSED STYLE
-   */
-
-  .container { max-width: 720px; }
-
-
-
-  /**
-   * RECENT POST
-   */
-
-  .recent-post-card { grid-template-columns: 0.7fr 1fr; }
-
-
-}
-
-
-/* Adicione este CSS para responsividade */
-@media (max-width: 768px) {
-  .grid-l {
-      display: flex;
-      flex-direction: column;
-  }
-  
-  .card-f {
-      margin-bottom: 20px;
-      width: 202px;
-  }
-}
-
-/* CSS para responsividade */
-@media (max-width: 768px) {
-  .li {
-      margin-bottom: 20px;
-  }
-}
-
-
-
-
-/**
- * responsive for large than 992px screen
- */
-
-@media (min-width: 992px) {
-
-  /**
-   * REUSED STYLE
-   */
-
-  .container { max-width: 930px; }
-
-
-
-  /**
-   * HERO
-   */
-
-  .hero { padding-block-start: calc(var(--section-padding) + 80px); }
-
-  .hero .container {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-  }
-
-
-
-  /** 
-   * TOPICS
-   */
-
-  .topic-card {
-    display: grid;
-    grid-template-columns: 0.3fr 1fr;
-    align-items: center;
-    gap: 20px;
-  }
-
-
-
-  /**
-   * FEATURE
-   */
-
-  .feature-list li:nth-child(-n+2) { width: calc(50% - 15px); }
-
-  .feature-list li:nth-child(n+3) { width: calc(33.33% - 20px); }
-
-  .feature-list li:nth-child(n+3) .headline-3 { --fontSize-2: 2rem; }
-
-  
-
-
-
-  /**
-   * TAGS
-   */
-
-  .tags .grid-list { grid-template-columns: repeat(4, 1fr); }
-
-
-
-  /**
-   * RECENT POST
-   */
-
-  .recent-post .container {
-    grid-template-columns: 1fr 0.6fr;
-    align-items: flex-start;
-  }
-
-
-
-  /**
-   * FOOTER
-   */
-
-  .footer-top { grid-template-columns: repeat(3, 1fr); }
-
-  .footer-bottom {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .copyright { margin-block-end: 0; }
-
-}
-
-
-
-
-
-/**
- * responsive for large than 1200px screen
- */
-
-@media (min-width: 1200px) {
-
-  /**
-   * REUSED STYLE
-   */
-
-  .container { max-width: 1140px; }
-
-  body.nav-active { overflow-y: overlay; }
-
-
-
-  /**
-   * HEADER
-   */
-
-  .nav-open-btn,
-  .navbar-top,
-  .navbar-bottom,
-  .copyright-text { display: none; }
-
-  .navbar,
-  .navbar.active {
-    all: unset;
-    display: block;
-  }
-
-  .navbar-list {
-    border-block-end: none;
-    display: flex;
-    gap: 40px;
-    margin-inline: auto;
-  }
-
-  .header .btn { margin-inline-start: 0; }
-
-  .navbar-link {
-    color: var(--text-wild-blue-yonder);
-    font-weight: unset;
-  }
-
-  .navbar-link:is(:hover, :focus-visible) {
-    color: var(--text-carolina-blue);
-    transform: translateX(0);
-  }
-
-
-
-  /**
-   * HERO
-   */
-
-  .hero .container { max-width: 1050px; }
-
-
-
-  /**
-   * TAGS
-   */
-
-  .tags .grid-list { grid-template-columns: repeat(6, 1fr); }
-
-
-
-  /**
-   * FOOTER
-   */
-
-  .footer-top {
-    gap: 40px;
-    padding-inline: 120px;
-  }
-
-}
+</html>
