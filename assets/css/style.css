@@ -651,7 +651,9 @@ body.nav-active { overflow: hidden; }
   margin-left: auto;
 }
 
-
+.card-title {
+  margin: 0; /* Remova margens padrão */
+}
 
 
 
@@ -663,7 +665,9 @@ body.nav-active { overflow: hidden; }
   
 }
 
-
+.card-date {
+  margin-right: 44.7px; /* Adicione espaço à direita do post-date */
+}
 
 
 .view-count {
@@ -1068,6 +1072,9 @@ ion-icon {
 
   .aside-title { --fontSize-2: 2rem; }
 
+  /* Estilos para telas menores, usando uma Media Query */
+
+/* Estilos para telas menores, usando uma Media Query */
 
 
 
@@ -1120,7 +1127,7 @@ ion-icon {
 
 
 /* Adicione este CSS para responsividade */
-@media (max-width: 575px) {
+@media (max-width: 768px) {
   .grid-l {
       display: flex;
       flex-direction: column;
@@ -1133,7 +1140,7 @@ ion-icon {
 }
 
 /* CSS para responsividade */
-@media (max-width: 575px) {
+@media (max-width: 768px) {
   .li {
       margin-bottom: 20px;
   }
