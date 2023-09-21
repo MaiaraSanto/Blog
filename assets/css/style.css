@@ -1072,29 +1072,7 @@ ion-icon {
 
   .aside-title { --fontSize-2: 2rem; }
 
-  /* Estilos para telas menores, usando uma Media Query */
-@media (max-width: 768px) {
-  .card-subtitle {
-    flex-direction: row; /* Alinhar os elementos horizontalmente */
-    justify-content: flex-end; /* Alinhar à direita */
-    align-items: center; /* Alinhar verticalmente ao centro */
-  }
 
-  .card-date {
-    margin-right: 10px; /* Adicionar espaçamento à direita do post-date */
-    margin-bottom: 0; /* Remover espaçamento abaixo do post-date */
-  }
-
-  .view-count {
-    display: flex;
-    align-items: center; /* Alinhar verticalmente ao centro */
-  }
-
-  ion-icon {
-    font-size: 20px; /* Tamanho do ícone */
-    margin-left: 5px; /* Adicionar espaçamento à esquerda do ícone */
-  }
-}
 
 
 }
