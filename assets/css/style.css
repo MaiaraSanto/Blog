@@ -1072,6 +1072,9 @@ ion-icon {
 
   .aside-title { --fontSize-2: 2rem; }
 
+  /* Estilos para telas menores, usando uma Media Query */
+
+/* Estilos para telas menores, usando uma Media Query */
 
 
 
@@ -1119,8 +1122,29 @@ ion-icon {
 
   .recent-post-card { grid-template-columns: 0.7fr 1fr; }
 
+
 }
 
+
+/* Adicione este CSS para responsividade */
+@media (max-width: 768px) {
+  .grid-l {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .card-f {
+      margin-bottom: 20px;
+      width: 202px;
+  }
+}
+
+/* CSS para responsividade */
+@media (max-width: 768px) {
+  .li {
+      margin-bottom: 20px;
+  }
+}
 
 
 
