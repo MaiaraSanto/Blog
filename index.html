@@ -2,888 +2,1197 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>May blogger</title>
-    <link rel="stylesheet" href="./assets/css/styles1.css">
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="preload" as="image" href="./assets/images/pattern-2.svg">
-    <link rel="preload" as="image" href="./assets/images/pattern-3.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>May Blogger</title>
+  <meta name="title" content="Wren - Perosonal Blog Website">
+  <meta name="description" content="This is a blog html template made by codewithsadee">
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preload" as="image" href="./assets/images/pattern-2.svg">
+  <link rel="preload" as="image" href="./assets/images/pattern-3.svg">
 
 </head>
 
-<body>
-    <header class="header" data-header>
-        <img class="logo" src="./assets/images/may.png" width="200" height="57" alt="May logo">
 
-<nav>
-    
-        <ul class="nav-list">
-           
-            <li>
-                <a href="http://127.0.0.1:5501/index.html#home, file:///C:/Users/Maiara/Downloads/May-Blogger/index.html#home, https://mayblogger.netlify.app/#home" class="nav-link">Home</a>
-            </li>
-            <li>
-                <a href="http://127.0.0.1:5501/index.html#topics, file:///C:/Users/Maiara/Downloads/May-Blogger/index.html#topics, http://127.0.0.1:5501/index.html#topics" class="nav-link">Tópicos</a>
-            </li>
-            <li>
-                <a href="http://127.0.0.1:5501/index.html#featured, file:///C:/Users/Maiara/Downloads/May-Blogger/index.html#featured, http://127.0.0.1:5501/index.html#featured" class="nav-link">Programação</a>
-            </li>
-            <li>
-                <a href="http://127.0.0.1:5501/index.html#recent, file:///C:/Users/Maiara/Downloads/May-Blogger/index.html#recent, http://127.0.0.1:5501/index.html#recent" class="nav-link">Posts Recentes</a>
-            </li>
-            <li>
-                <a href="#contact" class="nav-link">Contacto</a>
-            </li>
-            
+
+<body id="top">
+  <header class="header" data-header>
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="./assets/images/may.png" width="200" height="57" alt="May logo">
+      </a>
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="./assets/images/may.png" width="219" height="57" alt="May logo">
+          </a>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+        <ul class="navbar-list">
+          <li>
+            <a href="#home" class="navbar-link hover-1" data-nav-toggler>Home</a>
+          </li>
+          <li>
+            <a href="#topics" class="navbar-link hover-1" data-nav-toggler>Tópicos</a>
+          </li>
+          <li>
+            <a href="#featured" class="navbar-link hover-1" data-nav-toggler>Linguagem de Programação</a>
+          </li>
+          <li>
+            <a href="#recent" class="navbar-link hover-1" data-nav-toggler>Posts Recentes</a>
+          </li>
+          <li>
+            <a href="#contact" class="navbar-link hover-1" data-nav-toggler>Contacto</a>
+          </li>
         </ul>
-        
-    </nav>
-        <div class="navbar-right" onclick="goBack()">
-            <a href="#" class="btn btn-primary">Return to card</a>
-            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-                <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-            </button>
-        </div>
-        <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-        
-        </div>
-        </div>
-    </header><br><br>
-
-    <h2 id="post-title"><i>Título do Post</i></h2><br>      
-    <div class="container  text-center">
-        <div class="profile">
-            <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="90" height="90" alt="Mayarah" class="profile-banner">
-        </div>
-        <div class="content">
-            <p class="card-title">Mayarah Santos</p>
-            <div class="date">
-                <h3 id="post-date"></h3>
+        <div class="navbar-bottom">
+          <div class="profile-card">
+            <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" alt="May"
+              class="profile-banner">
+            <div>
+              <p class="card-title">Mayarah Santos !</p>
             </div>
-            <div class="views">
-                <h3>Views: <span id="view-count">0</span></h3>
-            </div>
+          </div>
+          <ul class="link-list">
+            <li>
+              <a href="https://www.linkedin.com/in/maiarasantos25/" class="navbar-bottom-link hover-1">Perfil</a>
+            </li>
+            <li>
+              <a href="https://github.com/MaiaraSanto" class="navbar-bottom-link hover-1">Artigos Salvos</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Adicionar nova postagem</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Meus Likes</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Configurações da conta</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Sair</a>
+            </li>
+          </ul>
         </div>
+        <p class="copyright-text">
+          Copyright 2023 © Mayarah Santos - Blog Template.
+          Developed by codewithsadee
+        </p>
+      </nav>
+      <a href="#" class="btn btn-primary">Subscribe</a>
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
     </div>
-    <br><br>
+  </header>
+  <main>
+    <article>
+      <section class="hero" id="home" aria-label="home">
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-subtitle">Hello Everyone!</p>
+            <h1 class="headline headline-1 section-title">
+              I’m <span class="span">Mayarah </span>
+            </h1>
+            <p class="hero-text">
+              Bem-vindo ao May Blog, onde desbravamos o mundo da tecnologia,
+              oferecendo notícias, análises e tutoriais para todos, desde iniciantes até entusiastas,
+              enquanto exploramos o impacto da tecnologia em nosso futuro. Junte-se a nós
+              nesta jornada tecnológica!
+            </p>
+            <div class="input-wrapper">
+              <input type="email" name="email_address" placeholder="Type your email address" required
+                class="input-field" autocomplete="off">
+              <button class="btn btn-primary">
+                <span class="span">Subscribe</span>
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </div>
+          </div>
+          <div class="hero-banner">
+            <img src="./assets/images/tec.png" width="327" height="490" alt="Mayarah" class="w-100">
+            <img src="./assets/images/pattern-2.svg" width="27" height="26" alt="shape" class="shape shape-1">
+            <img src="./assets/images/pattern-3.svg" width="27" height="26" alt="shape" class="shape shape-2">
+          </div>
+          <img src="./assets/images/shadow-1.svg" width="500" height="800" alt="" class="hero-bg hero-bg-1">
+          <img src="./assets/images/shadow-2.svg" width="500" height="500" alt="" class="hero-bg hero-bg-2">
+        </div>
+        
+      </section><br><br>
+      <section class="topics" id="topics" aria-labelledby="topic-label">
+        <div class="container">
+            <div class="card topic-card">
+                <div class="card-content">
+                    <h2 class="headline headline-2 section-title card-title" id="topic-label">
+                        Tópicos Tecnológicos
+                    </h2>
+                    <p class="card-text" style="color: var(--text-white); text-align: justify;">
+                        Notícias importantes Tecnologia e outros assuntos correlacionados
+                    </p>
+                    <div class="btn-group">
+                        <button class="btn-icon" aria-label="previous" data-slider-prev>
+                            <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
+                        </button>
+                        <button class="btn-icon" aria-label="next" data-slider-next>
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="slider" data-slider>
+                  <ul class="slider-list" data-slider-container>
+                      
+                    <li class="slider-item" data-post-id="1">
+                          <a href="post.html?theme=Cyber" class="slider-card" data-clickable>
+                              <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                                  <img src="./assets/images/cyber.jpg" width="507" height="618" loading="lazy" alt="Cyber" class="img-cover">
+                              </figure>
+                              <div class="slider-content">
+                                  <span class="slider-title">Cyber</span>
+                              </div>
+                          </a>
+                          <h3 class="headline headline-3 card-title">
+                              <a href="post.html?theme=Cyber" class="link hover-2"></a>
+                          </h3>
+                          <p class="card-text" style="color: var(--text-white); margin-bottom: 10px;">
+                              A cibersegurança é crucial na era digital, protegendo sistemas e dados pessoais contra ameaças estranhas .
+                          </p><br>
+                          <div class="profile-card">
+                            <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                            <div>
+                              <p class="card-title">Mayarah S</p>
+                                <div class="card-subtitle">
+                                    <div class="card-date"><span class="post-date"></span></div>
+                                    <div class="wrapper">
+                                        <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 50px;"></ion-icon>
+                                        <span class="span"><p><span class="view-count" data-view-count="1">0</span></p></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                      </li>
+                      <li class="slider-item" data-post-id="2">
+                          <a href="post.html?theme=Figma" class="slider-card" data-clickable>
+                              <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                                  <img src="./assets/images/figma.jpg" width="507" height="618" loading="lazy" alt="Travel" class="img-cover">
+                              </figure>
+                              <div class="slider-content">
+                                  <span class="slider-title">Figma</span>
+                              </div>
+                          </a>
+                          <h3 class="headline headline-3 card-title">
+                              <a href="post.html?theme=Figma" class="link hover-2"></a>
+                          </h3>
+                          <p class="card-text" style="color: var(--text-white); margin-bottom: 10px;">
+                              O Figma é uma plataforma de design online que simplifica o processo de criação de interfaces digitais.
+                          </p><br>
+                          <div class="profile-card">
+                            <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                            <div>
+                              <p class="card-title">Mayarah S</p>
+                                <div class="card-subtitle">
+                                    <div class="card-date"><span class="post-date"></span></div>
+                                    <div class="wrapper">
+                                        <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 50px;"></ion-icon>
+                                        <span class="span"><p><span class="view-count" data-view-count="2">0</span></p></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                          
+                      </li>
+                      <li class="slider-item" data-post-id="3">
+                        <a href="post.html?theme=Scrum" class="slider-card" data-clickable>
+                            <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                                <img src="./assets/images/scrum.jpg" width="507" height="618" loading="lazy" alt="Scrum" class="img-cover">
+                            </figure>
+                            <div class="slider-content">
+                                <span class="slider-title">Scrum</span>                               
+                            </div>
+                        </a>
+                        <h3 class="headline headline-3 card-title">
+                            <a href="post.html?theme=Scrum" class="link hover-2"></a>
+                        </h3>
+                        <p class="card-text" style="color: var(--text-white); margin-bottom: 10px;">
+                            Scrum é um framework ágil utilizado para gerenciamento de projetos na área da tecnologia.
+                        </p><br>
+                        <div class="profile-card">
+                          <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                          <div>
+                            <p class="card-title">Mayarah S</p>
+                              <div class="card-subtitle">
+                                  <div class="card-date"><span class="post-date"></span></div>
+                                  <div class="wrapper">
+                                      <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 50px;"></ion-icon>
+                                      <span class="span"><p><span class="view-count" data-view-count="3">0</span></p></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </li>
+        
+                    <li class="slider-item" data-post-id="4">
+                        <a href="post.html?theme=GPS" class="slider-card" data-clickable>
+                            <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                                <img src="./assets/images/gps.jpg" width="507" height="618" loading="lazy" alt="GPS" class="img-cover">
+                            </figure>
+                            <div class="slider-content">
+                                <span class="slider-title">GPS</span>                              
+                            </div>
+                        </a>
+                        <h3 class="headline headline-3 card-title">
+                            <a href="post.html?theme=GPS" class="link hover-2"></a>
+                        </h3>
+                        <p class="card-text" style="color: var(--text-white); margin-bottom: 10px;">
+                            O GPS é uma tecnologia para navegação e localização. Saiba como funciona e onde é aplicado.
+                        </p><br>
+                        <div class="profile-card">
+                          <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                          <div>
+                            <p class="card-title">Mayarah S</p>
+                              <div class="card-subtitle">
+                                  <div class="card-date"><span class="post-date"></span></div>
+                                  <div class="wrapper">
+                                      <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 50px;"></ion-icon>
+                                      <span class="span"><p><span class="view-count" data-view-count="4">0</span></p></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </li>
+        
+                   
+                    <li class="slider-item" data-post-id="5">
+                        <a href="post.html?theme=LGPD" class="slider-card" data-clickable>
+                            <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                                <img src="./assets/images/lgpd.png" width="507" height="618" loading="lazy" alt="LGPD" class="img-cover">
+                            </figure>
+                            <div class="slider-content">
+                                <span class="slider-title">LGPD</span>                               
+                            </div>
+                        </a>
+                        <h3 class="headline headline-3 card-title">
+                            <a href="post.html?theme=LGPD" class="link hover-2"></a>
+                        </h3>
+                        <p class="card-text" style="color: var(--text-white); margin-bottom: 10px;">
+                            LGPD: uma legislação que regula o tratamento de dados pessoais. Entenda seus princípios e impactos.
+                        </p><br>
+                        <div class="profile-card">
+                          <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                          <div>
+                            <p class="card-title">Mayarah S</p>
+                              <div class="card-subtitle">
+                                  <div class="card-date"><span class="post-date"></span></div>
+                                  <div class="wrapper">
+                                      <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 50px;"></ion-icon>
+                                      <span class="span"><p><span class="view-count" data-view-count="5">0</span></p></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section feature" aria-label="feature" id="featured">
+        <div class="container">
+          <h2 class="headline headline-2 section-title">
+            <span class="span">Tecnologias em alta</span>
+          </h2>
+          <p class="section-text">
+            Artigos em destaque sobre o mundo da Programação
+          </p>
+          <ul class="feature-list">
+            <li>
+              <div class="card feature-card" data-post-id="6" data-clickable>
+                <a href="post.html?theme=Front-end" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/frontend.webp" width="1602" height="903" loading="lazy" alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=Front-end" class="span hover-2">#Front End</a>
+                            <a href="post.html?theme=Front-end" class="span hover-2">#Java Script</a>
+                        </div>
+                        <div class="wrapper">
+                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
     
-    <div class="post-content" id="cyber-content" style="display: none;">
-        <h1>O que é Cibersegurança?</h1><br><br>
-        <figure class="card-banner img-holder slider-card" style="--width: 1602; --height: 903;">
-            <img src="./assets/images/cyber.jpg" width="1000" height="503" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure><br><br>
-        <p>
-            Cibersegurança é a prática que protege computadores e servidores, dispositivos móveis,
-            sistemas eletrônicos,
-            redes e dados contra ataques maliciosos. Também é chamada de segurança da tecnologia da
-            informação ou
-            segurança de informações eletrônicas. O termo é aplicável a uma variedade de contextos,
-            desde negócios até
-            computação móvel, e pode ser dividido em algumas categorias comuns. <br><br>
-            Segurança de rede é a prática de proteger uma rede de computadores contra intrusos,
-            sejam eles invasores
-            direcionados ou malware oportunista. <br><br>
-            Segurança de aplicativos foca em manter o software e os dispositivos livres de ameaças.
-            Um aplicativo
-            comprometido pode fornecer acesso aos dados que pretende proteger. O sucesso da
-            segurança começa na fase de
-            projeto, bem antes de um programa ou dispositivo ser implantado.
-            Segurança de informações protege a integridade e a privacidade dos dados, tanto no
-            armazenamento como em
-            trânsito. <br><br>
-            Segurança operacional inclui os processos e decisões para tratamento e proteção dos
-            arquivos com dados. As
-            permissões que os usuários têm ao acessar uma rede e os procedimentos que determinam
-            como e onde os dados
-            podem ser armazenados ou compartilhados se enquadram nesta categoria.
-            Recuperação de desastres e continuidade dos negócios definem como uma organização
-            responde a um incidente de
-            cibersegurança ou qualquer outro evento que cause a perda de operações ou dados. As
-            políticas de recuperação
-            de desastres ditam como a organização restaura suas operações e informações para
-            retornar à mesma capacidade
-            operacional de antes do evento. <br><br> A continuidade dos negócios é o plano ao qual a
-            organização recorre ao
-            tentar operar sem determinados recursos.
-            Educação do usuário final aborda o fator de cibersegurança mais imprevisível: as
-            pessoas. Qualquer pessoa
-            pode introduzir acidentalmente um vírus em um sistema seguro se deixar de seguir as
-            práticas recomendadas de
-            segurança. <br><br> Ensinar os usuários a excluir anexos suspeitos de e-mail, não conectar
-            unidades USB não
-            identificadas e várias outras lições importantes é vital para a segurança de qualquer
-            organização.
-        </p>
+                          <span class="span">6 mins read</span>
+                        </div>
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=Front-end" class="card-title hover-2">O front-end: interface de usuário e interação em sistemas e aplicativos.</a>
+                    </h3><br>
+                    <p class="card-text">
+                        O front-end, também conhecido como a "parte visível" de um site ou aplicativo, engloba o design, layout e elementos interativos que os usuários veem e usam
+                    </p>
+                    <div class="card-wrapper">
+                    <div class="profile-card">
+                      <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                      <div>
+                        <p class="card-title">Mayarah S</p>
+                          <div class="card-subtitle">
+                              <div class="card-date"><span class="post-date"></span></div>
+                              </a>
+                              </div>
+                              
+                          </div> 
+                                            
+                        </div>
+                        <a href="#">
+                          <div class="wrapper">
+                            <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                              <span class="span"><p><span class="view-count" data-view-count="6">0</span></p></span>
+                            </div>
+                           </a>
+                  </div>
+                  
+                </div>
+            </div>
+            
+            </li>
+
+            <li>
+              <div class="card feature-card" data-post-id="7" data-clickable>
+                <a href="post.html?theme=Back-end" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/front-end.webp" width="1602" height="903" loading="lazy" alt="Back-end Development" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=Back-end" class="span hover-2">#Back End</a>
+                            <a href="post.html?theme=Back-end" class="span hover-2">#Web</a>
+                        </div>
+                        <div class="wrapper">
+                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+    
+                          <span class="span">6 mins read</span>
+                        </div>
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=Back-end" class="card-title hover-2">Desenvolvimento Back-end: O lado oculto da web.</a>
+                    </h3><br>
+                    <p class="card-text">
+                        O desenvolvimento back-end lida com a lógica, os servidores e o armazenamento de dados que tornam as aplicações web possíveis.
+                    </p>
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                        <div>
+                          <p class="card-title">Mayarah S</p>
+                            <div class="card-subtitle">
+                                <div class="card-date"><span class="post-date"></span></div>
+                                
+                                </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                       <a href="#">
+                                <div class="wrapper">
+                                  <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                                    <span class="span"><p><span class="view-count" data-view-count="7">0</span></p></span>
+                                  </div>
+                                 </a>
+                </div>
+            </div>
+            
+            </li>
+
+            <li>
+              <div class="card feature-card" data-post-id="8" data-clickable>
+                <a href="post.html?theme=Tecnologia" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/inovacao.jpg" width="1602" height="903" loading="lazy" alt="Tecnologia e Inovação" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=Tecnologia" class="span hover-2">#Tecnologia</a>
+                            <a href="post.html?theme=Tecnologia" class="span hover-2">#Inovação</a>  
+                        </div> 
+                        <div class="wrapper">
+                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+    
+                          <span class="span">7 mins read</span>
+                        </div>                      
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=Tecnologia" class="card-title hover-2">Tecnologia e inovação impulsionam a sociedade.</a>
+                    </h3><br>
+                    <p class="card-text">
+                      Tecnologia e inovação impulsionam a evolução e os desafios na área tecnológica. trazendo novas soluções e desafios.
+                    </p>
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                        <div>
+                          <p class="card-title">Mayarah S</p>
+                            <div class="card-subtitle">
+                                <div class="card-date"><span class="post-date"></span></div>
+                               </a>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                          <div class="wrapper">
+                            <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                              <span class="span"><p><span class="view-count" data-view-count="8">0</span></p></span>
+                            </div>
+                           </a>
+                </div>
+            </div>
+            
+            </li>
+            <li>
+              <div class="card feature-card" data-post-id="9" data-clickable>
+                <a href="post.html?theme=DataScience" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/datascience.jpg" width="1602" height="903" loading="lazy" alt="Analytics" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=DataScience" class="span hover-2">#Analytics</a>
+                            <a href="post.html?theme=DataScience" class="span hover-2">#Business</a>
+                        </div>
+                        <div class="wrapper">
+                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+    
+                          <span class="span">7 mins read</span>
+                        </div>
+                  
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=DataScience" class="card-title hover-2">Data science: informação para decisões</a>
+                    </h3><br>
+                    <p class="card-text">
+                      Data Science, tem seu seu papel crítico na análise de informações e na tomada de decisões estratégicas, moldando o futuro dos negócios e da tecnologia.
+                    </p>
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                        <div>
+                          <p class="card-title">Mayarah S</p>
+                            <div class="card-subtitle">
+                                <div class="card-date"><span class="post-date"></span></div>
+                                </a>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                          <div class="wrapper">
+                            <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                              <span class="span"><p><span class="view-count" data-view-count="9">0</span></p></span>
+                            </div>
+                           </a>
+                </div>
+            </div>
+            
+            </li>
+            <li>
+              <div class="card feature-card" data-post-id="12" data-clickable>
+                <a href="post.html?theme=Redes" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/redes.jpg" width="1602" height="903" loading="lazy" alt="Computadores" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=Redes" class="span hover-2">#Computadores</a>
+                            <a href="post.html?theme=Redes" class="span hover-2">#Rede</a>
+                        </div>   
+                        <div class="wrapper">
+                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+    
+                          <span class="span">8 mins read</span>
+                        </div>                     
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=Redes" class="card-title hover-2">Redes de computadores e suas aplicações essenciais..</a>
+                    </h3><br>
+                    <p class="card-text">
+                      Redes são estruturas interconectadas que desempenham um papel fundamental na comunicação, dispositivos e sistemas compartilhados.
+                    </p>
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                        <div>
+                          <p class="card-title">Mayarah S</p>
+                            <div class="card-subtitle">
+                                <div class="card-date"><span class="post-date"></span></div>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                          <div class="wrapper">
+                            <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                              <span class="span"><p><span class="view-count" data-view-count="12">0</span></p></span>
+                            </div>
+                           </a>
+                </div>
+            </div>
+            
+            </li>
+
+
+            <li>
+              <div class="card feature-card" data-post-id="13" data-clickable>
+                <a href="post.html?theme=Internet" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/internet.jpg" width="1602" height="903" loading="lazy" alt="Internet e Redes Sociais" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=Internet" class="span hover-2">#Internet</a>
+                            <a href="post.html?theme=Internet" class="span hover-2">#Redes Sociais</a>
+                        </div>  
+                        <div class="wrapper">
+                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                          <span class="span">8 mins read</span>
+                        </div>                      
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=Internet" class="card-title hover-2">Internet e redes sociais: conexão global</a>
+                    </h3><br>
+                    <p class="card-text">
+                      Internet e redes sociais moldam nossa sociedade, influenciando nossa comunicação, informações e conexões globais.
+                    </p>
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                        <div>
+                          <p class="card-title">Mayarah S</p>
+                            <div class="card-subtitle">
+                                <div class="card-date"><span class="post-date"></span></div>
+                                </a>
+                              
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                          <div class="wrapper">
+                            <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                              <span class="span"><p><span class="view-count" data-view-count="13">0</span></p></span>
+                            </div>
+                           </a>
+                </div>
+            </div>
+            
+            </li>
+
+            <li>
+              <div class="card feature-card" data-post-id="14" data-clickable>
+                <a href="post.html?theme=IA" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/IA.jpg" width="1602" height="903" loading="lazy" alt="IA ChatGPT" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=IA" class="span hover-2">#IA</a>
+                            <a href="post.html?theme=IA" class="span hover-2">#ChatGPT</a>
+                        </div>  
+                        <div class="wrapper">
+                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+    
+                          <span class="span">9 mins read</span>
+                        </div>                     
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=IA" class="card-title hover-2">A Inteligência Artificial está revolucionando o futuro.</a>
+                    </h3><br>
+                    <p class="card-text">
+                      A Inteligência Artificial (IA) está redefinindo setores e promovendo avanços tecnológicos, transformando a maneira como vivemos e trabalhamos.
+                    </p>
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                        <div>
+                          <p class="card-title">Mayarah S</p>
+                            <div class="card-subtitle">
+                                <div class="card-date"><span class="post-date"></span></div>
+                                </a>
+                               
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                          <div class="wrapper">
+                            <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                              <span class="span"><p><span class="view-count" data-view-count="14">0</span></p></span>
+                            </div>
+                           </a>
+                </div>
+            </div>
+            
+            </li>
+
+            <li>
+              <div class="card feature-card" data-post-id="15" data-clickable>
+                <a href="post.html?theme=Mobile" class="slider-card">
+                    <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                        <img src="./assets/images/mobile.webp" width="1602" height="903" loading="lazy" alt="Apps Mobile" class="img-cover">
+                    </figure>
+                </a>
+                <div class="card-content">
+                    <div class="card-wrapper">
+                        <div class="card-tag">
+                            <a href="post.html?theme=Mobile" class="span hover-2">#Apps</a>
+                            <a href="post.html?theme=Mobile" class="span hover-2">#Mobile</a>
+                        </div> 
+                        <div class="wrapper">
+                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+    
+                          <span class="span">9 mins read</span>
+                        </div>                      
+                    </div>
+                    <h3 class="headline headline-3">
+                        <a href="post.html?theme=Mobile" class="card-title hover-2">Descubra o impacto da tecnologia móvel no cotidiano.</a>
+                    </h3><br>
+                    <p class="card-text">
+                      A tecnologia móvel está mudando como vivemos e trabalhamos, tornando-se indispensável e promovendo conectividade em nosso cotidiano
+                    </p>
+                    <div class="card-wrapper">
+                      <div class="profile-card">
+                        <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="48" height="48" loading="lazy" alt="Mayarah" class="profile-banner">
+                        <div>
+                          <p class="card-title">Mayarah S</p>
+                            <div class="card-subtitle">
+                                <div class="card-date"><span class="post-date"></span></div>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                          <div class="wrapper">
+                            <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; "></ion-icon>
+                              <span class="span"><p><span class="view-count" data-view-count="15">0</span></p></span>
+                            </div>
+                           </a>
+                </div>
+            </div>
+            
+            </li>
+
+          </ul>
+
+          <a href="#" class="btn btn-secondary">
+            <span class="span">Show More Posts</span>
+
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+
+        <img src="./assets/images/shadow-3.svg" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
+
+      </section>
+
+
+
+      <section class="tags" aria-labelledby="tag-label">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title" id="tag-label">
+            <span class="span">Tags Populares</span>
+          </h2>
+
+          <p class="section-text">
+            Palavras-chave mais procuradas
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/tecnologia.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Travel">
+
+                <p class="btn-text">Stacks</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/software.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Culture">
+
+                <p class="btn-text">Software</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/dev.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Lifestyle">
+
+                <p class="btn-text">Dev</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/IA.jpg" style="border-radius: 100px;" width="32" height="32px" loading="lazy" alt="Fashion">
+
+                <p class="btn-text">IA</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/datascience.jpg" style="border-radius: 100px;" style="border-radius: 100px;" width="32" height="32px" loading="lazy" alt="Food">
+
+                <p class="btn-text">Business</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/js.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Space">
+
+                <p class="btn-text">JS</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/internet.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Animal">
+
+                <p class="btn-text">Internet</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/frontend.webp" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Minimal">
+
+                <p class="btn-text">API</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/redes.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Interior">
+
+                <p class="btn-text">Redes</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/bi.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Plant">
+
+                <p class="btn-text">BI</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/git.png" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Nature">
+
+                <p class="btn-text">Github</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/redes.jpg" style="border-radius: 100px;" width="32" height="32" loading="lazy" alt="Business">
+
+                <p class="btn-text">Redes</p>
+              </button>
+            </li>
+
+          </ul>
+
+        </div>
+      </section><br><br><br><br>
+
+      
+      <section class="topics" id="topics" aria-labelledby="topic-label">
+        <div class="container">
+
+        </div>
+        </section>
+      
+        <section class="tags" aria-labelledby="tag-label" id="recent">
+        <div class="container">
+            <h2 class="headline headline-2 section-title" id="tag-label">
+                <span class="span">Posts recentes</span>
+            </h2>
+            <p class="section-text">
+                Dicas úteis de como trabalhar com Tecnologia
+            </p>
+            <ul class="grid-list grid-l">
+                <li class="li">
+                    <button class="card feature-card card-f" data-post-id="16" data-clickable>
+                        <div class="card-content">
+                            <a href="post.html?theme=Trabalho">
+                                <figure class="card-banner cardb1 img-holder" style="width: 371; height: 258;">
+                                    <img src="./assets/images/recent-post-1.jpg" style="width: 160px;"
+                                        alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                                </figure>
+                                <h3 class="headline headline-3 card-title cardt"><br>
+                                    <a href="post.html?theme=Trabalho" class="link hover-2">Trabalhando com Tecnologia</a>
+                                </h3>
+                            </a>
+                            <div class="card-wrapper">
+                                <div class="card-tag">
+                                    <p class="card-subtitle card-s"><p class="card-date card-d"><span class="post-date"></span></p>
+                                    <div class="wrapper wr">
+                                        <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 10px;"></ion-icon>
+                                        <span class="span"><p><span class="view-count" data-view-count="16">0</span></p></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </li>
+
+                <li class="li">
+                  <button class="card feature-card card-f" data-post-id="17" data-clickable>
+                      <div class="card-content">
+                          <a href="post.html?theme=Codigo">
+                              <figure class="card-banner cardb1 cardb1 img-holder" style="--width: 271; --height: 258;">
+                                  <img src="./assets/images/recent-post-2.jpg" style="width: 160px;" loading="lazy"
+                                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                              </figure>
+                              <h3 class="headline headline-3 card-title cardt"><br>
+                                  <a href="post.html?theme=Codigo" class="link hover-2">Desenvolva um código limpo</a>
+                              </h3>
+                          </a>
+                          <div class="card-wrapper">
+                              <div class="card-tag">
+                                  <p class="card-subtitle card-s"><p class="card-date card-d"><span class="post-date"></span></p>
+                                  <div class="wrapper wr">
+                                      <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left:10px"></ion-icon>
+                                      <span class="span"><p><span class="view-count" data-view-count="17">0</span></p></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </button>
+              </li>
+              
+            <li class="li">
+              <button class="card feature-card card-f" data-post-id="18" data-clickable>
+                <div class="card-content">
+                  <a href="post.html?theme=Remoto">
+                  <figure class="card-banner cardb1 img-holder" style="--width: 271; --height: 258;">
+                    <img src="./assets/images/recent-post-3.jpg" style="width: 160px;" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+                 
+                  <h3 class="headline headline-3 card-title cardt"><br>
+                    
+                    <a href="post.html?theme=Remoto" class="link hover-2">Trabalho em TI no Exterior</a>
+                  </h3>
+                </a>
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <p class="card-subtitle card-s"><p class="card-date card-d"><span class="post-date"></span></p>
+                      <div class="wrapper wr">
+                        <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 10px;"></ion-icon>
+                        <span class="span"><p><span class="view-count" data-view-count="18">0</span></p></span>
+                      </div>
+                    </div>
+                    </div>
+                
+</div>
+
+          
+              </button>
+            </li>
+
+            <li class="li">
+              <button class="card feature-card card-f" data-post-id="19" data-clickable>
+                <div class="card-content">
+                  <a href="post.html?theme=Grupo">
+                  <figure class="card-banner cardb1 img-holder" style="--width: 271; --height: 258;">
+                    <img src="./assets/images/recent-post-4.jpg" style="width: 160px;" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <h3 class="headline headline-3 card-title cardt"><br>
+                  
+                    <a href="post.html?theme=Grupo" class="link hover-2">Trabalho em Grupo e Colaboração</a>
+                  </h3>
+                </a>
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <p class="card-subtitle card-s"><p class="card-date card-d"><span class="post-date"></span></p>
+                      <div class="wrapper wr">
+                        <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 10px;"></ion-icon>
+                        <span class="span"><p><span class="view-count" data-view-count="19">0</span></p></span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </button>
+            </li>
+
+            <li class="li">
+              <button class="card feature-card card-f" data-post-id="20" data-clickable>
+                <div class="card-content">
+                  <a href="post.html?theme=Salario">
+                  <figure class="card-banner cardb1 img-holder" style="--width: 271; --height: 258;">
+                    <img src="./assets/images/recent-post-5.jpg" style="width: 160px;" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <h3 class="headline headline-3 card-title cardt"><br>
+
+                    <a href="post.html?theme=Salario" class="link hover-2">Salário de um desenvoledor</a>
+                  </h3>
+                </a>
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <p class="card-subtitle card-s"><p><p class="card-date card-d"><span class="post-date"></span></p>
+                      <div class="wrapper wr">
+                        <ion-icon name="eye-outline" aria-hidden="true" style="font-size: 20px; margin-left: 9px;"></ion-icon>
+                        <span class="span"><p><span class="view-count" data-view-count="20">0</span></p></span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </button>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+      <section class="section recent-post" id="recent" aria-labelledby="recent-label">
+
+      </section>
+      
+
+    
+ 
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer style="margin-top: -11rem;">
+    <div class="container" id="contact">
+
+      <div class="card footer">
+
+        <div class="section footer-top">
+
+          <div class="footer-brand">
+
+            <a href="#" class="logo">
+              <img src="./assets/images/may.png" width="189" height="57" loading="lazy" alt="Wren logo">
+            </a>
+
+            <p class="footer-text">
+              Este blog é dedicado a manter você atualizado sobre as tendências mais recentes em tecnologia, análises de
+              produtos, dicas e truques, e muito mais. 
+            </p>
+
+            <p class="footer-list-title">Endereço</p>
+
+            <address class="footer-text address">
+              Avenida Presidente Kennedy, 783 <br>
+              Tucano, Bahia, Brasil
+            </address>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">tecnologia</p>
+
+            <ul>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Redes</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Linguagem</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Scrum</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">IA</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Developer</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Programação</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Stacks</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Front End</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Back-End</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Design</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Figma</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Git</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Newsletter</p>
+
+            <p class="footer-text">
+              Inscreva-se para ser o primeiro a receber as últimas histórias que nos inspiram, estudos de caso e
+              notícias da área.
+            </p>
+
+            <div class="input-wrapper">
+              <input type="text" name="name" placeholder="Nome completo" required class="input-field"
+                autocomplete="off">
+
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div class="input-wrapper">
+              <input type="email" name="Endereço" placeholder="Emaill address" required class="input-field"
+                autocomplete="off">
+
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            </div>
+
+            <a href="#" class="btn btn-primary">
+              <span class="span">Subscribe</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="footer-bottom" >
+
+          <p class="copyright">
+            &copy; Developed by <a href="#" class="copyright-link">Mayarah Santos.</a>
+          </p>
+
+          <ul class="social-list">
+            
+            <li>
+              <a href="https://api.whatsapp.com/send?phone=5575991050049&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20contigo." class="social-link">
+                <ion-icon style="color: green;" name="logo-whatsapp"></ion-icon>
+
+                <span class="span">Whatsapp</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/MaiaraSanto" class="social-link">
+                <ion-icon style="color: black;" name="logo-github"></ion-icon>
+
+                <span class="span">Github</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.linkedin.com/in/maiarasantos25/" class="social-link">
+                <ion-icon style="color: rgb(4, 103, 160);" name="logo-linkedin"></ion-icon>
+
+                <span class="span">Linkedin</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
     </div>
+  </footer>
+</div>
+</article>
 
-    <div class="post-content" id="figma-content" style="display: none;">
-        <h1>Figma: ferramenta de Design e uso em TI.</h1><br><br>
-        <figure class="card-banner img-holder slider-card" style="--width: 1602; --height: 903;">
-            <img src="./assets/images/figma.jpg" width="1000" height="503" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure> <br><br>
-        <p>
-            O Figma é uma plataforma colaborativa para construção de design de interfaces e
-            protótipos, pertencente a
-            empresa Fima, Inc., <br><br> lançada em 2016 por Dylan Field e Evan Wallace. O objetivo era o de
-            criar uma ferramenta
-            gratuita que trouxesse colaboração entre pessoas e times, permitindo criar um produto
-            para as mais diversas
-            plataformas, mantendo a acessibilidade do sistema. <br><br>
-            Com essa ferramenta, designers e demais profissionais de todo o mundo têm a chance de
-            construir o design de
-            produtos digitais inteiros, como sites, aplicativos para dispositivos móveis (tais como
-            tablets, smartphones
-            ou até mesmo smartwatches), e se quiser, até mesmo as pequenas telas como temporizador
-            de micro-ondas. <br><br>
-            Independente do nível de complexidade, seja simples ou complexo, com o Figma é possível
-            explorar o máximo do
-            design de interface e da *criação de fluxos inteiros.
-            Criar produtos digitais no Figma é bem fácil, imersivo, e a cada atualização, muito mais
-            ágil, já que a
-            equipe está constantemente implementando ferramentas e recursos que permitem a você
-            projetar interfaces com
-            mais praticidade.
-        </p>
-    </div>
+</main>
 
-    <div class="post-content" id="scrum-content" style="display: none;">
-        <h1>O que é Scrum e como começar.</h1><br><br>
-        <figure class="card-banner img-holder slider-card" style="--width: 1602; --height: 903;">
-            <img src="./assets/images/scrum.jpg" width="1000" height="503" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure> <br><br>
-        <p>
-            O Scrum é uma estrutura ágil de gestão de projetos que ajuda as equipes a estruturar e
-            gerenciar o trabalho
-            por meio do conjunto de valores, princípios e práticas. Semelhante a uma equipe de rugby
-            (de onde vem o
-            nome) treinando para o grande jogo, o Scrum estimula as equipes a aprender com as
-            experiências, a se
-            organizar para resolver um problema e a refletir sobre os êxitos e fracassos para
-            melhorar sempre. <br><br>
-            Embora o Scrum sobre o qual estou falando seja mais usado pelas equipes de
-            desenvolvimento de software, os
-            princípios e as lições dessa estrutura podem ser aplicados a todos os tipos de trabalhos
-            em equipe. Esse é
-            um dos motivos de o Scrum ser tão popular. Muitas vezes considerado uma estrutura de
-            gestão de projetos de
-            agilidade, o Scrum descreve um conjunto de reuniões, ferramentas e cargos que atuam
-            juntos para ajudar as
-            equipes a organizarem e gerenciarem o trabalho. <br><br>
-            Tudo sobre Metodologia Scrum: o que é e como essa ferramenta pode te ajudar a poupar
-            tempo e gerir melhor
-            seus projetos
-            Em meio à correria do dia a dia, alcançar bons resultados no gerenciamento de projetos,
-            mantendo-os dentro
-            do tempo e dos custos pré-determinados é, com certeza, um desafio para qualquer
-            profissional. <br><br> Nesse sentido,
-            falamos aqui sobre o 5W2H e hoje vamos falar sobre a ferramenta Scrum, uma
-            metodologia Agile que
-            pode ajudar muito na gestão de projetos (de qualquer área ou setor).
-            Mas você sabe o que é Scrum e como utilizar essa ferramenta de gerenciamento de projetos
-            na prática? Não?
-            Então você veio ao lugar correto!
-            Esse é um termo já bem popular no mundo da tecnologia, sendo largamente utilizado por
-            times de
-            desenvolvimento de software, mas por incrível que pareça, quase completamente
-            desconhecido por profissionais
-            de outras áreas, incluindo os profissionais de planejamento e controladoria. <br><br>
-            O Scrum, apesar do nome estranho, traz uma abordagem à gestão de projetos e foi
-            desenvolvida por Jeff
-            Sutherland, que, no vídeo abaixo (em inglês, do TEDx), fala sobre a inspiração que o
-            levou a desenvolver a
-            técnica. <br><br>
 
-            Em meio à correria do dia a dia, alcançar bons resultados no gerenciamento de projetos,
-            mantendo-os dentro
-            do tempo e dos custos pré-determinados é, com certeza, um desafio para qualquer
-            profissional. Nesse sentido,
+  <!-- 
+    - #BACK TO TOP
+  -->
 
-        </p>
-    </div>
-
-    <div class="post-content" id="gps-content" style="display: none;">
-        <h1>GPS - Sistema de Posicionamento Global.</h1><br><br>
-        <figure class="card-banner img-holder slider-card">
-            <img src="./assets/images/gps.jpg" width="800" height="903" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure><br><br>
-        <p>
-            "O GPS (Sistema de Posicionamento Global) é formado por três segmentos: o espacial, de
-            controle e
-            utilizador.
-            O espacial é composto por 24 satélites distribuídos em seis planos orbitais. <br><br> O segmento
-            de controle é
-            responsável pelo monitoramento das órbitas dos satélites. Por fim, o segmento do
-            utilizador é o receptor
-            GPS, responsável pela captação dos sinais fornecidos pelos satélites. <br><br>
-            Esse sistema de navegação permite, através de satélites artificiais, a obtenção de
-            informações sobre a
-            localização geográfica em qualquer lugar da superfície terrestre e em qualquer hora do
-            dia.
-            A localização geográfica ocorre em razão da emissão de rádio dos satélites, que são
-            captadas por receptores
-            GPS na Terra, onde são decodificadas as informações e fornecidos a latitude, longitude e
-            altitude. <br><br>
-            Na história da humanidade sempre foram utilizadas técnicas de localização, muitas delas
-            através de fatores
-            naturais como estrelas, sol, vento, formações rochosas, entre outras. No entanto, o
-            Sistema de
-            Posicionamento Global apresenta extrema eficácia na obtenção de informações referentes à
-            localização e
-            orientação geográfica. Proporciona a posição geográfica em qualquer ponto do planeta.
-            "O Sistema de Posicionamento Global é um programa que foi desenvolvido pelo Departamento
-            de Defesa dos
-            Estados Unidos, com o custo aproximado de 10 bilhões de dólares. <br><br> O primeiro receptor foi
-            testado em 1982. O
-            objetivo era de que esse se tornasse o principal sistema de navegação das forças armadas
-            estadunidense."
-        </p>
-    </div>
-
-    <div class="post-content" id="lgpd-content" style="display: none;">
-        <h1>Lei Geral de Proteção de Dados Pessoais</h1><br><br>
-        <figure class="card-banner img-holder slider-card" style="--width: 1602; --height: 903;">
-            <img src="./assets/images/lgpd.png" width="1000" height="503" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure><br><br>
-        <p>
-            A Lei Geral de Proteção de Dados Pessoais (LGPD), Lei n° 13.709/2018, foi promulgada
-            para proteger os
-            direitos fundamentais de liberdade e de privacidade e a livre formação da personalidade
-            de cada indivíduo. <br><br> A
-            Lei fala sobre o tratamento de dados pessoais, dispostos em meio físico ou digital,
-            feito por pessoa física
-            ou jurídica de direito público ou privado, englobando um amplo conjunto de operações que
-            podem ocorrer em
-            meios manuais ou digitais. <br><br>
-            No âmbito da LGPD, o tratamento dos dados pessoais pode ser realizado por dois agentes
-            de tratamento, o
-            Controlador e o Operador. Além deles, há a figura do Encarregado, que é a pessoa
-            indicada pelo Controlador
-            para atuar como canal de comunicação entre o Controlador, o Operador, os(as) titulares
-            dos dados e a
-            Autoridade Nacional de Proteção de Dados (ANPD). <br><br>
-            Tema fundamental trabalhado pela Lei, o tratamento de dados diz respeito a qualquer
-            atividade que utiliza um
-            dado pessoal na execução da sua operação, como, por exemplo: coleta, produção, recepção,
-            classificação,
-            utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento,
-            armazenamento,
-            eliminação, avaliação ou controle da informação, modificação, comunicação,
-            transferência, difusão ou
-            extração. <br><br>
-            Antes de iniciar qualquer tipo de tratamento de dados pessoais, o agente deve se
-            certificar que a finalidade
-            da operação está registrada de forma clara e explícita e os propósitos especificados e
-            informados ao(à)
-            titular dos dados. No caso do setor público, a principal finalidade do tratamento está
-            relacionada à
-            execução de políticas públicas, devidamente previstas em lei, regulamentos ou
-            respaldadas em contratos,
-            convênios ou instrumentos semelhantes. <br><br>
-            O compartilhamento dentro da administração pública, no âmbito da execução de políticas
-            públicas, é previsto
-            na Lei e dispensa o consentimento específico. Contudo, o órgão que coleta deve informar
-            com transparência
-            qual dado será compartilhado e com quem. Do outro lado, o órgão que solicita receber o
-            compartilhamento
-            precisa justificar esse acesso com base na execução de uma política pública específica e
-            claramente
-            determinada, descrevendo o motivo da solicitação de acesso e o uso que será feito com os
-            dados. Informações
-            protegidas por sigilo seguem protegidas e sujeitas a normativos e regras específicas. <br><br>
-            Essas e outras
-            questões fundamentais devem ser observadas pelos órgãos e entidades da administração
-            federal no sentido de
-            assegurar a conformidade do tratamento de dados pessoais de acordo com as hipóteses
-            legais e princípios da
-            LGPD.
-        </p>
-    </div>
-
-    <div class="post-content" id="frontend-content" style="display: none;">
-        <h1>Front end: entenda o que é, para que serve.</h1><br><br>
-        <figure class="card-banner img-holder slider-card" style="--width: 1602; --height: 903;">
-            <img src="./assets/images/frontend.webp" width="1000" height="503" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure><br><br>
-        <p>
-            O front-end é uma área da programação que se dedica a criar a parte visual e interativa
-            de um site,
-            aplicativo ou software. É o que o usuário vê e usa quando acessa uma plataforma digital.
-            Por exemplo, quando
-            você entra no Facebook, é o que permite que você veja as fotos, os vídeos, os
-            comentários, as curtidas e os
-            botões de ação. <br><br>
-            Esse trabalho é feito com linguagens como HTML, CSS e JavaScript, que permitem criar
-            elementos gráficos,
-            estilos, animações e funcionalidades. O HTML é a linguagem que define a estrutura e o
-            conteúdo da página, o
-            CSS é a linguagem que define o visual e o layout da página, e o JavaScript é a linguagem
-            que define o
-            comportamento e a interação da página.
-            Em suma, consiste em tudo aquilo que diz respeito à parte da frente de um site,
-            aplicativo ou software; toda
-            a aparência visível pelos seus visitantes. Essa programação também é chamada de
-            client-side, pois é
-            executada no lado do cliente, ou seja, no navegador do usuário. <br><br>
-            O front-end serve para que os usuários possam interagir com uma aplicação; em outras
-            palavras, para
-            construir a interface de utilização de um site, aplicativo ou software.
-            O desenvolvimento front-end é interpretado pelos navegadores ou sistemas operacionais e
-            os ajuda a
-            transmitir aqueles elementos a quem deseja interagir com eles. <br><br>
-            Trata-se de uma área muito importante e dinâmica da programação web, pois é o que
-            determina a experiência do
-            usuário e a sua satisfação com o site. Um bom front-end deve ser bonito, intuitivo,
-            rápido e compatível com
-            diferentes dispositivos e navegadores.
-        </p>
-    </div>
-
-    <div class="post-content" id="backend-content" style="display: none;">
-        <h1> Back-end: a interface de uma aplicação.</h1><br><br>
-        <figure class="card-banner img-holder slider-card">
-            <img src="./assets/images/front-end.webp" width="800" height="1003" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure><br><br>
-        <p>
-            De maneira prática, o profissional de back-end precisa pensar em soluções para uma
-            operação. O leque de
-            opções é grande, portanto, uma aplicação pode ser um software, site, aplicativo etc. É
-            importante destacar
-            que o desenvolvedor back-end está conectado à experiência do usuário (UX), mas no
-            sentido de proporcionar
-            uma navegação ágil e intuitiva. <br><br> Quem trabalha nesta etapa da programação precisa ter uma
-            noção clara dos
-            objetivos do projeto e deve ser capaz de manter a segurança das informações,
-            principalmente com o aumento
-            constante de dados.
-            Algumas atribuições da pessoa desenvolvedora back-end são conhecimento de linguagens de
-            programação web
-            (tais como Python e JavaScript), integração de aplicações e domínio do banco de dados. <br><br>
-            Assim como para
-            trabalhar com qualquer etapa do desenvolvimento, é fundamental ter raciocínio lógico
-            para compreender
-            códigos e comandos, além de uma visão ampla da Tecnologia da Informação.
-            Em qualquer aplicação web, há necessariamente uma estrutura (da mais simples à mais
-            complexa) que
-            possibilita o funcionamento, de fato, da operação. Em linhas gerais, esta estrutura é
-            chamada de back-end,
-            enquanto a parte visível é, ao contrário, front-end. <br><br>
-            O desenvolvedor responsável pelo que está “por trás” da operação precisa ordenar o
-            direcionamento ou a regra
-            da programação. A seguir, falaremos sobre a dinâmica do back-end e com se aprimorar na
-            carreira.
-        </p>
-    </div>
-
-    <div class="post-content" id="tecnologia-content" style="display: none;">
-        <h1>Tecnologia e Inovação: conceitos e inovação.</h1><br><br>
-        <figure class="card-banner img-holder slider-card" style="--width: 1602; --height: 903;">
-            <img src="./assets/images/inovacao.jpg" width="1000" height="503" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure><br><br>
-        <p>
-            Tecnologia e inovação são conceitos que tomaram conta do mercado nos últimos tempos em
-            todos os segmentos da
-            economia. Consideradas aspectos essenciais, elas são indispensáveis para as estratégias
-            comerciais,
-            atividades e sucesso de uma empresa. <br><br>
-            Nesse sentido, com o avanço tecnológico e a transformação digital, implementar
-            tecnologia e inovação em uma
-            organização é algo inevitável. Sobretudo para melhorar processos, otimizar o tempo e os
-            custos, fatores
-            importantes para todo negócio. <br><br>
-            Apesar da semelhança entre os termos, existem diferenças entre eles e compreendê-las é
-            imprescindível.
-            Pensando nisso, continue a leitura deste post e saiba o que é tecnologia e inovação,
-            qual o objetivo e as
-            vantagens que proporcionam para as empresas!
-            A tecnologia consiste em um conjunto de recursos modernos desenvolvidos para
-            aperfeiçoar, automatizar e
-            digitalizar operações. Por sua vez, a inovação é caracterizada como o desenvolvimento de
-            algo novo, que foge
-            do tradicional. <br><br>
-            A evolução tecnológica está a todo vapor e, com isso, diversos recursos específicos para
-            o meio empresarial
-            são desenvolvidos no mercado. Trata-se de uma nova realidade em todo o mundo, que está
-            mudando a cultura de
-            muitas companhias. <br><br>
-            Nessa perspectiva, termos como tecnologia e inovação se expandiram e, atualmente, são
-            considerados
-            indispensáveis para toda empresa. Afinal, o uso de tecnologias e uma mente inovadora
-            conseguem gerar
-            diferenciais relevantes para o negócio.
-            No entanto, o passo inicial é compreender que tecnologia e inovação são conceitos
-            distintos, veja a seguir
-            as características de cada um deles! <br><br>
-            Tecnologia é uma área abrangente e que está em constante evolução, criando ferramentas
-            aplicáveis para todos
-            os campos do conhecimento.
-        </p>
-    </div>
-
-    <div class="post-content" id="datascience-content" style="display: none;">
-        <h1>Data Science: decisões e coleta em dados!</h1><br><br>
-        <figure class="card-banner img-holder slider-card" style="--width: 1602; --height: 903;">
-            <img src="./assets/images/datascience.jpg" width="1000" height="503" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure><br><br>
-        <p>
-            Data Science ou Ciência de Dados é o conjunto de estratégias, técnicas e ferramentas que
-            permitem trabalhar
-            com os dados e transformá-los em inteligência para as empresas. <br><br>
-            A Ciência de Dados lida com diversos processos — coleta, preparação, exploração,
-            visualização e análise de
-            dados — para que eles se tornem inteligíveis e possam ser usados para tomar melhores
-            decisões de negócio.
-            Dados brutos não são informações. Eles precisam ser coletados e organizados por
-            ferramentas e algoritmos
-            para se tornarem informações.
-            Porém, é somente com a intervenção humana, que faz cruzamentos e análises a partir de um
-            objetivo, que os
-            dados geram Insights para o Business Intelligence (BI) ou Inteligência de Negócio.
-            BI, por sua vez, é a área de negócio que dá suporte à tomada de decisões para a empresa,
-            nas mais diversas
-            áreas, como marketing, logística e finanças. <br><br>
-            A análise de dados procura empregar um raciocínio crítico sobre o conjunto de dados para
-            extrair
-            conhecimento deles. O cientista de dados pode fazer diferentes tipos de análise.
-            O Big Data é um dos pilares da Ciência de Dados. Um cientista de dados precisa saber
-            trabalhar com essa
-            infinidade de informações e extrair conhecimentos delas.
-            Por isso, o Data Science adota uma série de métodos e cálculos para transformar os dados
-            em inteligência —
-            caso contrário, seriam apenas dados brutos sem qualquer utilidade para os negócios.
-        </p>
-    </div>
-
-    <div class="post-content" id="redes-content" style="display: none;">
-        <h1>Rede e computadores: informações entre si.</h1><br><br>
-        <figure class="card-banner img-holder slider-card" style="--width: 1602; --height: 903;">
-            <img src="./assets/images/redes.jpg" width="1000" height="503" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure><br><br>
-        <p>
-            Uma rede de computadores é um conjunto de sistemas interligados entre si. Seu principal
-            objetivo é
-            transmitir dados e trocar informações, além de muitas outras funções. <br><br>
-            Essas conexões são conhecidas como estações de trabalho (ou pontos e dispositivos de
-            rede). Modems,
-            servidores, celulares e computadores são alguns exemplos desses pontos conectados à
-            rede. Eles podem ser
-            encontrados em qualquer local que tenha conexão a internet, como casas, empresas, lojas,
-            órgãos públicos e
-            outros. <br><br>
-            É por meio das redes que as informações são facilmente compartilhadas entre pessoas e
-            organizações do mundo
-            inteiro. Ações como o envio de e-mails, assistir a vídeos pela televisão ou o receber
-            áudios pelo celular só
-            são possíveis através desse recurso.
-            Outros exemplos muito comuns são: <br>
-            a utilização de aplicativos; <br>
-            Compartilhamento de dispositivos hardwares, como impressoras ou discos; <br>
-            Armazenamento de informações em servidores; <br>
-            Recebimento e envio de mídias de comunicação, como vídeo, imagem, texto e voz; <br><br>
-
-            Uma conexão pode ser estabelecida usando cabo ou mídia sem fio. Hardware e software são
-            usados ​​para
-            conectar computadores e ferramentas em qualquer uma dessas redes. Esses dispositivos são
-            utilizados para
-            especificar e padronizar a maneira como os dados serão enviados e/ou recebidos. <br><br>
-            Qualquer rede de computadores requer dispositivos e regras para determinar uma
-            comunicação entre as
-            estações, sejam cabos, modens, roteadores ou placas de comunicação.
-            Além disso, alguns procedimentos comandam a comunicação entre os sistemas e garantem que
-            a transmissão de
-            informações ocorrerá sem interrupções ou problemas aparentes, por meio de normas para a
-            transmissão,
-            verificação e envio dos dados.
-        </p>
-    </div>
-
-    <div class="post-content" id="internet-content" style="display: none;">
-        <h1>A influência das redes sociais no cotidiano.</h1><br><br>
-        <figure class="card-banner img-holder slider-card" style="--width: 1602; --height: 903;">
-            <img src="./assets/images/internet.jpg" width="1000" height="503" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure> <br><br>
-        <p>
-            Para a maioria dos usuários deste conglomerado de redes em escala mundial, o acesso a
-            elas passou a ser uma
-            necessidade constante.
-            Pelas estatísticas com a quantidade de acessos por dia, podemos constatar que as redes
-            sociais deixaram de
-            ser apenas uma forma de manter contatos, elas passaram a ser fonte de informação,
-            atração de novos clientes,
-            publicidade, oportunidade e também lazer. <br><br>
-            Nas redes sociais cada indivíduo tem sua função e identidade cultural. Sua relação com
-            outros indivíduos vai
-            formando um todo coeso que representa a rede e a criação de grupos de interesse como
-            esporte, cultura,
-            entretenimento, educação, etc. <br><br>
-            Atualmente temos a formação de uma nova sociedade, a qual denominamos de Aldeia Global.
-            Ela exerce
-            influência direta no comportamento social e o comportamento social também exerce
-            influência sobre ela.
-            E se alguém acha que não é influenciado pelo que está nessas mídias, se engana. As
-            mudanças vindas desse
-            meio afetam diretamente o cotidiano, a forma de agir e também a de pensar das pessoas. <br><br>
-            Quando analisamos as redes sociais, percebemos que são arquiteturas sociais baseadas em
-            sistemas digitais e
-            tem como objetivo ligar vários tipos de pessoas e organizações que tendem a ter
-            objetivos e valores
-            semelhantes.A velocidade com as mudanças comportamentais que vem acontecendo são tão
-            surpreendentes que faz
-            com que mudanças significativas e inesperadas aconteçam, por exemplo, transformar um
-            locutor em uma pessoa
-            boa ou má muito rapidamente com base na concepção dos interlocutores sobre o que foi
-            postado.
-        </p>
-    </div>
-
-    <div class="post-content" id="ia-content" style="display: none;">
-        <h1> IA e ChatGPT: suporte e triagem com clientes.</h1><br><br>
-        <figure class="card-banner img-holder slider-card" style="--width: 1602; --height: 903;">
-            <img src="./assets/images/IA.jpg" width="1000" height="503" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure> <br><br>
-        <p>
-            Para começar este texto, perguntei ao ChatGPT como ele poderia ajudar as empresas a
-            melhorar e personalizar
-            o atendimento ao cliente. A resposta que recebi, em resumo, foi que o ChatGPT pode
-            contribuir de várias
-            maneiras, como com respostas rápidas e consistentes, atendimento 24/7, suporte
-            multicanal, triagem e
-            direcionamento, etc. Ao final, um aviso: “É importante notar que, embora o ChatGPT possa
-            melhorar
-            significativamente o atendimento ao cliente, ele não substitui totalmente o atendimento
-            humano,
-            especialmente em situações complexas ou emocionais”. <br><br>
-            Assim, o ChatGPT, como qualquer outra ferramenta de Inteligência Artificial (IA),
-            precisa ser usada de forma
-            estratégica pelos profissionais. Com os objetivos bem definidos, a IA pode facilitar a
-            omnicanalidade no
-            atendimento, tornando a jornada do cliente mais fluida e personalizada, bem como fazer
-            com que as resoluções
-            de problemas sejam mais rápidas e práticas. <br><br> Neste artigo, descubra quais ferramentas de
-            IA as marcas vêm
-            usando (e de que forma), além do ChatGPT!
-            ChatGPT e outras tecnologias já são tendência
-            Seja no chatbot do website ou no WhatsApp, as empresas já estão adotando o ChatGPT no
-            atendimento ao
-            consumidor. Com ele, é possível melhorar a experiência do cliente, fornecendo respostas
-            mais ágeis, sem
-            perder o cuidado com o tom. <br><br> O atendimento automatizado já era utilizado há anos pelas
-            organizações, porém o
-            ChatGPT chegou para transformar o marketing conversacional, aumentando as chances de
-            concluir uma venda e
-            também de fidelizar o cliente. <br><br>
-            “A IA generativa e a IA conversacional estão no topo da lista de 10 tecnologias
-            emergentes de 2023, segundo
-            a Forrester. Soluções como essas apresentam uma capacidade surpreendente de compreender
-            e responder de
-            maneira contextual às solicitações dos clientes. No entanto, a chave para que o
-            atendimento automatizado
-            tenha sucesso é acompanhar de perto as interações da plataforma, a fim de garantir que
-            as necessidades dos
-            clientes estão sendo verdadeiramente atendidas”, diz o head de Dados e Marketing da
-            ConectCar, Daniel
-            Frankestein. É a análise contínua, realizada por um profissional humano, que vai
-            permitir a otimização do
-            atendimento e agregar valor à experiência do cliente.
-        </p>
-    </div>
-
-    <div class="post-content" id="mobile-content" style="display: none;">
-        <h1>Apps Mobile: ferramenta útil no cotidiano.</h1><br><br>
-        <figure class="card-banner img-holder slider-card" style="--width: 1602; --height: 903;">
-            <img src="./assets/images/mobile.webp" width="1000" height="503" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure><br><br>
-        <p>
-            Que os dispositivos mobile estão cada vez mais fazendo parte do nosso dia a dia, você já
-            sabe, mas já parou
-            pra pensar quais tecnologias estão por trás de aplicativos famosos de comunicação,
-            transporte e entrega, por
-            exemplo?
-            Nesse artigo, vamos conhecer um pouco mais sobre essas tecnologias que fazem parte do
-            universo mobile e
-            descobrir por onde começar a desenvolver seus próprios aplicativos Os aplicativos móveis
-            estão entre as
-            tecnologias mais utilizadas por usuários de smartphones e tablets. Eles facilitam e
-            agilizam uma série de
-            tarefas do nosso dia a dia. <br><br> Atualmente, seu uso é tão comum que pode acabar até mesmo
-            passando
-            despercebido.Um app mobile pode servir para compras virtuais, delivery, transferências
-            bancárias, jogos e
-            muito mais. São muitas as áreas beneficiadas por esse tipo de ferramenta. Assim,
-            entender melhor a
-            tecnologia e saber como aplicá-la ao seu modelo de negócios pode ser uma boa ideia para
-            o sucesso da sua
-            empresa. <br><br>Pensando em tudo isso, preparamos este conteúdo com algumas informações
-            importantes sobre mobile
-            apps. Dessa forma, você saberá quais são os principais benefícios oferecidos por eles e
-            decidir se são uma
-            opção interessante ou não para sua estratégia de negócios. <br><br>
-            Como o próprio nome indica, o app mobile é uma ferramenta desenvolvida para dispositivos
-            móveis, como
-            tablets e smartphones. Eles podem ser baixados em lojas virtuais, como a Apple App Store
-            e a Google Play
-            Store. Todos os dados desse tipo de aplicativo ficam salvos no armazenamento do seu
-            celular ou tablet. <br><br>Já os
-            web apps são como sites responsivos. Muitos deles são acessados por meio de browsers
-            comuns, como o Google
-            Chrome, por exemplo. Alguns, no entanto, podem ser baixados em desktops (de notebooks ou
-            computadores) ou
-            televisores do tipo smart. <br><br>
-            Assim, pode-se dizer que um aplicativo mobile é desenvolvido exclusivamente para
-            sistemas operacionais (SOs)
-            de dispositivos portáteis. As principais opções de SOs são IOs e Android. Dessa forma,
-            as ferramentas rodam
-            sem interrupções desses sistemas específicos.
-        </p>
-    </div>
-
-    <div class="post-content" id="trabalho-content" style="display: none;">
-        <h1> Quais cargos mais valorizados em Tecnologia.</h1><br><br>
-        <figure class="card-banner img-holder slider-card">
-            <img src="./assets/images/recent-post-1.jpg" width="750" height="2003" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure><br><br>
-        <p>
-            Nos próximos anos, haverá uma demanda por novas habilidades em diversas áreas ou até
-            mesmo a obsolescência
-            de algumas delas. E, é claro, os cargos de tecnologia estão entre os mais relevantes
-            para os próximos cinco
-            anos.
-            Essa perspectiva é apresentada no mais recente relatório do Fórum Econômico Mundial, uma
-            das mais seguras
-            referências das transformações no mercado de trabalho
-            O relatório do Futuro do Trabalho é feito desde 2016 e publicado a cada dois anos. Na
-            edição 2023, ele
-            envolveu 803 empresas, que coletivamente contratam mais de 11,3 milhões de pessoas em 27
-            tipos de indústria
-            e 45 economias diferentes. O mesmo levantamento já trouxe a análise das profissões que
-            mais vão crescer até
-            2027, além daquelas que vão desaparecer. <br><br> A adoção de tecnologias de ponta depende de
-            grandes volumes de
-            dados — o que impulsiona a demanda por profissionais capazes de analisar e extrair
-            insights valiosos dessas
-            informações.
-            conforme o número de empresas que buscam tomar decisões estratégicas baseadas em dados,
-            a demanda por
-            analistas de inteligência de negócios cresce, justamente porque são responsáveis por
-            transformar dados
-            brutos em novos projetos. <br><br>
-            com o aumento da adoção de tecnologias de ponta, há uma necessidade crescente de
-            profissionais capazes de
-            gerenciar, proteger e otimizar bancos de dados e redes para lidar com o grande volume de
-            dados gerados.
-        </p>
-    </div>
-
-    <div class="post-content" id="codigo-content" style="display: none;">
-        <h1>Como Desenvolver Um Código Limpo.</h1><br><br>
-        <figure class="card-banner img-holder slider-card" style="--width: 1602; --height: 903;">
-            <img src="./assets/images/recent-post-2.jpg" width="750" height="503" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure><br><br>
-        <p>
-            O clean code código limpo é uma estrutura construída de maneira simples e direta.
-            Facilitando a
-            compreensão das funcionalidades da aplicação ou software e deixando claro qual o
-            objetivo.
-            Esse conceito de desenvolvimento facilita os desenvolvedores na manutenção, a inserção
-            de novas aplicações e
-            as atualizações no código. Caso o cliente queira fazer alguma alteração do seu produto
-            futuramente. <br><br>
-            Portanto, ao criar um código limpo pode ser muito importante, por exemplo, evitar fazer
-            alterações no código
-            ou em outras funcionalidades que se quebrem durante o upgrade do aplicativo.
-            Depois de entender o que é um código limpo, agora confira como você pode trabalhar com
-            utilizando esta
-            técnica: <br>
-            O primeiro passo para ter um código limpo é dar nomes a tudo o que for essencial no
-            projeto, sejam
-            variáveis, funções, parâmetros, etc. Dessa maneira, sempre que você precisar voltar a
-            mexer na aplicação,
-            você entenderá o que cada parte do projeto significa e onde está. <br><br>
-            As dicas neste passo é que você seja preciso na hora de escolher o nome, até para lhe
-            facilitar nas buscas
-            futuras. Também não é recomendado o uso de nomes muito grandes, o importante é que ele
-            seja descritivo e de
-            fácil compreensão.
-            O ideal é que os métodos e funções do projeto ganhem nomes de verbos que indiquem quais
-            são as suas
-            finalidades e as classes e objetivos devem ser identificados por nomes mais comuns. <br><br>
-            Desde o início a responsabilidade de um código limpo é do próprio desenvolvedor e por
-            isso é importante
-            criá-lo a sua função, ou seja, crie um código com a sua cara. Em outras palavras, crie
-            suas próprias funções
-            e variáveis de maneira clara e objetiva, para que você saiba como mexer na aplicação,
-            mesmo após muito tempo
-            depois de tê-la entregado ao cliente.
-        </p>
-    </div>
-
-    <div class="post-content" id="remoto-content" style="display: none;">
-        <h1>Como conseguir emprego em TI no exterior.</h1><br><br>
-        <figure class="card-banner img-holder slider-card" style="--width: 1602; --height: 903;">
-            <img src="./assets/images/recent-post-3.jpg" width="750" height="503" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure><br><br>
-        <p>
-            O cenário nacional do mercado de tecnologia se mostra favorável e promissor para quem
-            deseja entrar e
-            evoluir nele. No entanto, engana-se quem pensa que as oportunidades estão apenas dentro
-            do Brasil.
-            Muitas empresas estrangeiras buscam aqui trabalhadores dispostos a mudarem de país e
-            buscarem desafios além
-            das fronteiras do Brasil. <br><br>
-            Com o trabalho remoto mais popular e o real desvalorizado em relação ao dólar e ao euro,
-            há uma tendência de
-            que empresas do mundo todo contratem profissionais em mercados como o brasileiro.
-            O conhecimento em inglês, mesmo que apenas intermediário, é imprescindível até para
-            vagas em países que
-            não têm a língua como sua principal. <br><br>
-            Para conseguir a tão sonhada vaga no Exterior, é preciso Ficar de olho em sites especializados: além do
-            LinkedIn, é possível buscar vagas em
-            sites, como Toptal,
-            Turing, StackOverflow e Relocate.me. Quem quer trabalhar recebendo por projeto pode
-            procurar por
-            oportunidades nas plataformas Fiverr, Upwork e Freelancer.com. Açám do mais,
-            Tenha pronto um perfil em inglês: o LinkedIn permite criar uma versão da página pessoal
-            em dois ou mais
-            idiomas, o que facilita aos recrutadores estrangeiros.A rede social é um bom lugar para
-            buscar por vagas,
-            filtrando por "trabalho remoto" e selecionando a opção "Mundialmente" no campo de
-            localização. <br><br>
-            Mantenha o Github atualizado: é bem provável que os recrutadores não conheçam a
-            universidade ou escola que
-            você cursou. Um portfólio de projetos é uma forma simples de comprovar sua habilidade,
-            já que o inglês é o
-            idioma da maioria das linguagens de programação.
-        </p>
-    </div>
-
-    <div class="post-content" id="grupo-content" style="display: none;">
-        <h1>TI, interatividade e trabalho em grupo.</h1><br><br>
-        <figure class="card-banner img-holder slider-card" style="--width: 1602; --height: 903;">
-            <img src="./assets/images/recent-post-4.jpg" width="750" height="503" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure><br><br>
-        <p>
-            Utilizar o e-mail corporativo, sistemas de comunicação internos ou falar ao telefone são
-            meios de agilizar o
-            trabalho e aumentar a produção. É desta forma que os profissionais dão andamento nos
-            projetos desenvolvidos
-            em equipe. Atualmente, a política empresarial faz com que o contato físico com os demais
-            colegas sejam
-            estreitados pelas novas tecnologias. <br><br>
-            No entanto, segundo especialistas em Recursos Humanos, apenas a forma de se trabalhar em
-            grupo mudou. Saber
-            realizar projetos em equipe continua sendo tão, ou mais, importante para o
-            desenvolvimento profissional.
-            "O ritmo de vida e os curtos prazos estabelecidos para se concluir trabalhos (devido a
-            concorrência cada vez
-            mais acirrada no mercado), exige que as empresas criem formas mais rápidas de interação. <br><br>
-            No entanto, o
-            relacionamento interpessoal entre os funcionários conta muito no momento de promoção. É
-            essencial saber
-            trabalhar com as pessoas, afinal de contas, o sucesso empresarial depende do conjunto",
-            avalia a consultora
-            da Gelre, empresa de Recursos Humanos, Maria de Fátima e Silva.
-            A gerente de projetos do Grupo Foco, empresa de gestão em recursos humanos, Tatiana
-            Penteado, compartilha da
-            mesma posição. Para ela, o profissional que deseja conquistar bom lugar no mercado de
-            trabalho precisa ter
-            duas importantes qualidades: saber trabalhar em grupo e sob pressão.
-            "As companhias, sejam nacionais ou multinacionais, não têm tempo a perder. A
-            criatividade nos trabalhos
-            executados, a rapidez no momento de resolver os problemas e saber trabalhar em conjunto
-            com os demais
-            colaboradores faz toda a diferença." <br><br>
-            Segundo ela, mesmo com as ferramentas que a tecnologia disponibiliza nos dias de hoje,
-            nada substitui o
-            contato presencial. "Não é a toa que no mundo corporativo é necessário reuniões,
-            discussões com os
-            funcionários presentes. Mas os encontros são pontuais, e ao longo dos dias, os projetos
-            são agilizados por
-            meio dos contatos virtuais. E isso é muito positivo. Vale a pena equilibrar esta
-            balança"
-        </p>
-    </div>
-
-    <div class="post-content" id="salario-content" style="display: none;">
-        <h1>Quanto ganha e o que faz um desenvolvedor.</h1><br><br>
-        <figure class="card-banner img-holder slider-card" style="--width: 1602; --height: 903;">
-            <img src="./assets/images/recent-post-5.jpg" width="750" height="503" loading="lazy"
-                alt="Self-observation is the first step of inner unfolding" class="card feature-card">
-        </figure><br><br>
-        <p>
-            Uma pessoa desenvolvedora de software é responsável por planejar, escrever e testar
-            programas
-            computacionais. Sua atuação é parecida com a de um programador, mas geralmente um
-            desenvolvedor se envolve
-            em mais etapas da criação de softwares, não apenas na escrita dos códigos. <br><br>
-            Além de programar, desenvolvedores de software participam do planejamento das
-            aplicações, especificam os
-            requisitos do projeto, participam de reuniões de alinhamento, realizam testes, fazem a
-            manutenção dos
-            programas, entre outras atividades. <br><br>
-            Um desenvolvedor de software atua desde o planejamento da aplicação, em alinhamento com
-            a equipe e de acordo
-            com os requisitos do projeto. Sua atuação abrange o projeto do início ao fim, já que
-            trabalha tanto na
-            interface do usuário quanto na comunicação com o banco de dados. <br><br>
-            Empresas que desenvolvem softwares muitas vezes adotam metodologias ágeis. Por isso,
-            desenvolvedores também
-            costumam trabalhar com esse tipo de metodologia, com ciclos iterativos de
-            desenvolvimento e respostas
-            rápidas aos feedbacks dos usuários. <br><br>
-            Desenvolvedores de software podem atuar em projetos de desenvolvimento de diversos tipos
-            de programas, como
-            sites e páginas para web, ferramentas, jogos, aplicativos mobile, entre outros. As
-            oportunidades de atuação
-            no mercado de trabalho também são bastante abrangentes, em todo tipo de empresa, no
-            setor privado ou no
-            público.
-            Para quem deseja começar estudar para trabalhar como desenvolvedor de software, é
-            necessário saber por onde
-            começar. O setor de tecnologia cresceu muito no Brasil nos últimos anos e há inúmeras
-            oportunidades no
-            setor. Com o aquecimento do mercado, surgiram diversas opções de cursos (online ou
-            presenciais, pagos ou
-            gratuitos)
-        </p>
-    </div><br>
-
-    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
     <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
   </a>
 
-  
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <script src="./assets/js/script1.js"></script>
-    <script src="./assets/js/mobile.js"></script>
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./post.php"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
