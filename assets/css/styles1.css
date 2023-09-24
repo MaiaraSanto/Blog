@@ -152,14 +152,14 @@ body.nav-active { overflow: hidden; }
 
 /* Estilo para centralizar a logo e ajustar a margem esquerda */
 .logo {
-  margin-left: 65px; /* Ajuste conforme necessário para controlar a margem esquerda */
+  margin-left: 50px; /* Ajuste conforme necessário para controlar a margem esquerda */
   margin-right: auto; /* Centraliza horizontalmente a logo */
   display: block; /* Define como um bloco para alinhar corretamente */
 }
 
 /* Estilo para centralizar o botão e ajustar a margem direita */
 .navbar-right {
-  margin-right: 80px; /* Ajuste conforme necessário para controlar a margem direita */
+  margin-right: 70px; /* Ajuste conforme necessário para controlar a margem direita */
   margin-left: auto; /* Centraliza horizontalmente o conteúdo */
   display: flex; /* Usar flexbox para alinhar verticalmente o conteúdo */
   align-items: center; /* Alinha verticalmente ao centro */
@@ -203,7 +203,7 @@ body.nav-active { overflow: hidden; }
   }
   
   .nav-list li {
-    margin-right: 40px;
+    margin-right: 70px;
   }
   
   /* Estilos para os itens de navegação */
@@ -488,6 +488,7 @@ h3:hover{
   height: 2px;
   background: #fff;
   margin: 8px;
+ 
 }
 
 .mobile-menu{
@@ -536,7 +537,9 @@ h3:hover{
   }
   .mobile-menu{
     display: block;
-    margin-right: 50px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 9px;
   }
   
 }
@@ -568,5 +571,78 @@ h3:hover{
 }
 
 
+@media (max-width: 768px) {
 
+/* Estilos CSS para responsivo */
+.post-title-container {
+  text-align: center; /* Centraliza o título */
+  margin-top: 20px; /* Espaço superior para separar o título */
+}
 
+.post-content img {
+  max-width: 90%; /* Torna a imagem responsiva */
+  height: auto;
+  margin-top: -20px;
+
+}
+
+/* Estilos padrão para o rodapé */
+.footer-container {
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+}
+/* Estilos para telas menores (por exemplo, telas menores que 768px) */
+@media screen and (max-width: 768px) {
+  .footer-container {
+      text-align: center; /* Centralizar o conteúdo */
+  }
+
+  .social-list {
+      list-style: none; /* Remover marcadores de lista */
+      padding: 0;
+  }
+
+  .social-link {
+      display: block; /* Colocar cada link de rede social em uma nova linha */
+      margin: 10px auto; /* Centralizar e adicionar espaçamento vertical */
+      text-align: center;
+  }
+}
+
+/* Estilos para telas menores (por exemplo, telas menores que 768px) */
+@media screen and (max-width: 768px) {
+  .logo {
+      width: auto; /* Remova a largura fixa para que o logotipo se ajuste automaticamente */
+      height: 30px; /* Defina uma altura desejada para o logotipo na versão responsiva */
+      margin-left: 10px;
+  }
+  .btn-primary {
+    padding: 8px 8px;
+    border-radius: var(--radius-pill);
+  
+  }
+  .navbar-right{
+    margin-right: 10px;
+    height: 10px;
+  }
+
+  h1 {
+    font-size: 30px; /* Tamanho da fonte do título */
+    text-align: center !important; /* Alinhamento centralizado com !important para priorizar */
+    margin: 0; /* Remover margem padrão para evitar espaçamento extra */
+    white-space: nowrap; /* Impede a quebra de texto em várias linhas */
+  }
+
+  .views h3 {
+    font-size: clamp(1.7rem, 2.7vw, 2.7rem); /* Use a mesma fonte e tamanho */
+    font-weight: 100;  
+  }
+
+  #view-count {
+    font-size: clamp(1.7rem, 2.7vw, 2.7rem);
+    font-weight: 100;
+  }
+
+  
+}
