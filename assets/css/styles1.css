@@ -580,7 +580,7 @@ h3:hover{
 }
 
 .post-content img {
-  max-width: 90%; /* Torna a imagem responsiva */
+  max-width: 100%; /* Torna a imagem responsiva */
   height: auto;
   margin-top: -20px;
 
