@@ -13,41 +13,55 @@
         rel="stylesheet">
     <link rel="preload" as="image" href="./assets/images/pattern-2.svg">
     <link rel="preload" as="image" href="./assets/images/pattern-3.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
     <header class="header" data-header>
         <img class="logo" src="./assets/images/may.png" width="200" height="57" alt="May logo">
 
-        <ul class="navbar-list">
+<nav>
+    
+        <ul class="nav-list">
+           
             <li>
-                <a href="http://127.0.0.1:5501/index.html#home, https://mayblogger.netlify.app/#home" class="navbar-link hover-1" data-nav-toggler>Home</a>
+                <a href="http://127.0.0.1:5501/index.html#home, file:///C:/Users/Maiara/Downloads/May-Blogger/index.html#home, https://mayblogger.netlify.app/#home" class="nav-link">Home</a>
             </li>
             <li>
-                <a href="http://127.0.0.1:5501/index.html#topics, https://mayblogger.netlify.app/#topics" class="navbar-link hover-1" data-nav-toggler onclick="goBack()">Tópicos</a>
+                <a href="http://127.0.0.1:5501/index.html#topics, file:///C:/Users/Maiara/Downloads/May-Blogger/index.html#topics, http://127.0.0.1:5501/index.html#topics" class="nav-link">Tópicos</a>
             </li>
             <li>
-                <a href="http://127.0.0.1:5501/index.html#featured, http://127.0.0.1:5501/index.html#featured" class="navbar-link hover-1" data-nav-toggler>Linguagem de Programação</a>
+                <a href="http://127.0.0.1:5501/index.html#featured, file:///C:/Users/Maiara/Downloads/May-Blogger/index.html#featured, http://127.0.0.1:5501/index.html#featured" class="nav-link">Linguagem de Programação</a>
             </li>
             <li>
-                <a href="http://127.0.0.1:5501/index.html#recent, https://mayblogger.netlify.app/#recent" class="navbar-link hover-1" data-nav-toggler>Posts Recentes</a>
+                <a href="http://127.0.0.1:5501/index.html#recent, file:///C:/Users/Maiara/Downloads/May-Blogger/index.html#recent, http://127.0.0.1:5501/index.html#recent" class="nav-link">Posts Recentes</a>
             </li>
             <li>
-                <a href="#contact" class="navbar-link hover-1" data-nav-toggler>Contacto</a>
+                <a href="#contact" class="nav-link">Contacto</a>
             </li>
+            
         </ul>
+        
+    </nav>
         <div class="navbar-right" onclick="goBack()">
             <a href="#" class="btn btn-primary">Return to card</a>
             <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
                 <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
             </button>
         </div>
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        
         </div>
         </div>
     </header><br><br>
 
     <h2 id="post-title"><i>Título do Post</i></h2><br>      
-    <div class="container">
+    <div class="container  text-center">
         <div class="profile">
             <img src="https://avatars.githubusercontent.com/u/93337368?v=4" width="90" height="90" alt="Mayarah" class="profile-banner">
         </div>
@@ -859,6 +873,10 @@
         </p>
     </div><br>
 
+    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+      </a>
+
     <div class="footer-bottom" id="contact">
 
         <p class="copyright">
@@ -906,6 +924,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script src="./assets/js/script1.js"></script>
+    <script src="./assets/js/mobile.js"></script>
 </body>
 
 </html>
