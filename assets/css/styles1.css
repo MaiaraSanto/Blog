@@ -332,6 +332,8 @@ img {
     transition: var(--transition-1);
   
   }
+
+  
   
   /* Centralizar e justificar texto e adicionar espaçamento entre parágrafos */
 p {
@@ -341,7 +343,9 @@ p {
   margin-left: 180px; /* Ajuste conforme necessário */
  margin-right: 180px;
  line-height: 3rem;
- 
+ overflow-wrap: anywhere;
+ overflow-wrap: break-word;
+ word-spacing: normal !important;
 }
 
 .container {
@@ -643,6 +647,19 @@ h3:hover{
     font-size: clamp(1.7rem, 2.7vw, 2.7rem);
     font-weight: 100;
   }
+
+  p {
+    text-align: justify;
+    
+    margin-left: 20px; /* Ajuste a margem esquerda conforme necessário para telas menores */
+    margin-right: 20px; /* Ajuste a margem direita conforme necessário para telas menores */
+    line-height: 3rem; /* Ajuste a altura da linha conforme necessário para telas menores */
+    margin-bottom: 20px;
+    margin-top: -30px;
+    word-spacing: normal !important; 
+    overflow-wrap: anywhere;
+   
+}  
 
   
 }
