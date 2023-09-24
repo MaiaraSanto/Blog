@@ -628,7 +628,7 @@ h3:hover{
   }
 
   h1 {
-    font-size: 30px; /* Tamanho da fonte do título */
+    font-size: 25px; /* Tamanho da fonte do título */
     text-align: center !important; /* Alinhamento centralizado com !important para priorizar */
     margin: 0; /* Remover margem padrão para evitar espaçamento extra */
     white-space: nowrap; /* Impede a quebra de texto em várias linhas */
