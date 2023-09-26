@@ -400,6 +400,105 @@ p {
   margin-right: 10px;
 }
 
+.footer-bottom {
+ 
+  padding-block: 100px;
+  background: var(--bg-oxford-blue-2);
+  display: flex;
+  position: relative;
+}
+
+
+
+/* CSS Principal */
+.blog-footer {
+  border-top: 1px solid var(--text-white);
+  color: #fff;
+  padding: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footer-left {
+  flex: 1;
+  margin-left: -75px;
+  font-size: 17px;
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 80px;
+}
+
+.icon {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 50px;
+}
+
+
+
+
+
+.footer-right a:hover {
+  transform: translateY(-3px);
+    transition: var(--transition-3);
+}
+
+    @media (max-width: 768px) {
+      .blog-footer {
+          flex-direction: column; /* Empilha os elementos em telas menores */
+          align-items: center;
+          text-align: center;
+      }
+    
+      .footer-left {
+        text-align: center; /* Centraliza todo o conteúdo no modo responsivo */
+        margin-right: 100px;
+    }
+    
+    .developer-info {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px; /* Ajusta o espaçamento conforme necessário */
+      margin-left: 158px;
+    
+    }
+
+    .num{
+     margin-top: -15px;
+    }
+    
+    .location {
+        margin-top: 10px; /* Adiciona espaço entre as informações de localização */
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .span{
+      margin-left: 30px;
+    }
+      .footer-right {
+          margin-right: 0;
+          flex-direction: row;
+          justify-content: left;
+      }
+    
+    
+    
+      .icon {
+          margin: 0 5px;
+          font-size: 35px;
+      }
+    
+    }
+
+
 #view-count {
   font-size: clamp(1rem, 2vw, 2rem);
   font-weight: 100;
