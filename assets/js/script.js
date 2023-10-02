@@ -18,16 +18,53 @@ const addEventOnElements = function (elements, eventType, callback) {
  * MOBILE NAVBAR TOGGLER
  */
 
-const navbar = document.querySelector("[data-navbar]");
-const navTogglers = document.querySelectorAll("[data-nav-toggler]");
+class MobileNavbar {
+  constructor(mobileMenu, navList, navLinks,btnPrimary) {
+    this.mobileMenu = document.querySelector(mobileMenu);
+    this.navList = document.querySelector(navList);
+    this.navLinks = document.querySelectorAll(navLinks);
+    this.btnPrimary = document.querySelector(btnPrimary);
+    this.activeClass = "active";
 
-const toggleNav = () => {
-  navbar.classList.toggle("active");
-  document.body.classList.toggle("nav-active");
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  animateLinks() {
+    this.navLinks.forEach((link, index) => {
+      link.style.animation
+        ? (link.style.animation = "")
+        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+            index / 7 + 0.3
+          }s`);
+    });
+  }
+
+  handleClick() {
+    this.navList.classList.toggle(this.activeClass);
+    this.mobileMenu.classList.toggle(this.activeClass);
+    this.btnPrimary.classList.toggle(this.activeClass);
+    this.animateLinks();
+  }
+
+  addClickEvent() {
+    this.mobileMenu.addEventListener("click", this.handleClick);
+  }
+
+  init() {
+    if (this.mobileMenu) {
+      this.addClickEvent();
+    }
+    return this;
+  }
 }
 
-addEventOnElements(navTogglers, "click", toggleNav);
-
+const mobileNavbar = new MobileNavbar(
+  ".mobile-menu",
+  ".nav-list",
+  ".nav-list li",
+  ".btn-primary",
+);
+mobileNavbar.init();
 
 
 /**
