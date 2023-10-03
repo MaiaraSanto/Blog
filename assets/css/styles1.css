@@ -216,7 +216,7 @@ body.nav-active { overflow: hidden; }
 
 /* Estilo para centralizar o botão e ajustar a margem direita */
 .navbar-right {
-  margin-right: 90px;
+  margin-right: 50px;
   /* Ajuste conforme necessário para controlar a margem direita */
   margin-left: auto;
   /* Centraliza horizontalmente o conteúdo */
