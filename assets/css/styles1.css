@@ -787,7 +787,7 @@ h3:hover {
   .logo {
     width: auto;
     /* Remova a largura fixa para que o logotipo se ajuste automaticamente */
-    height: 35px;
+    height: 30px;
     /* Defina uma altura desejada para o logotipo na versão responsiva */
     margin-left: 10px;
   }
@@ -799,7 +799,7 @@ h3:hover {
   }
 
   .navbar-right {
-    margin-right: 18px;
+    margin-right: 30px;
     height: 10px;
   }
 
