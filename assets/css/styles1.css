@@ -334,6 +334,7 @@ img {
 .btn-primary {
   padding: 8px 16px;
   border-radius: var(--radius-6);
+  margin-left: 17px;
 }
 
 .btn-secondary {
