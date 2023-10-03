@@ -216,7 +216,7 @@ body.nav-active { overflow: hidden; }
 
 /* Estilo para centralizar o botão e ajustar a margem direita */
 .navbar-right {
-  margin-right: 50px;
+  margin-right: 100px;
   /* Ajuste conforme necessário para controlar a margem direita */
   margin-left: auto;
   /* Centraliza horizontalmente o conteúdo */
@@ -334,7 +334,7 @@ img {
 .btn-primary {
   padding: 8px 16px;
   border-radius: var(--radius-6);
-  margin-left: 17px;
+  
 }
 
 .btn-secondary {
@@ -764,7 +764,7 @@ h3:hover {
   }
 
   .navbar-right {
-    margin-right: 30px;
+    margin-right: 20px;
     height: 10px;
   }
 
