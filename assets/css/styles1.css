@@ -334,7 +334,6 @@ img {
 .btn-primary {
   padding: 8px 16px;
   border-radius: var(--radius-6);
-  
 }
 
 .btn-secondary {
@@ -496,62 +495,31 @@ p {
   border-radius: var(--radius-48);
   color: var(--text-wild-blue-yonder);
   margin-block-end: 24px;
+ margin-top: -100px;
 }
 
 .footer-top {
   display: grid;
-  gap: 20px;
+  
 }
 
-.footer-brand .footer-text { font-size: var(--fontSize-6); }
 
-.footer-text:not(.address) { margin-block: 20px; }
-
-.footer-brand .footer-list-title { margin-block-end: 2px; }
-
-.footer-list-title {
-  color: var(--text-columbia-blue);
-  font-size: var(--fontSize-3);
-  margin-block-end: 30px;
+.logomay{
+  margin-left: -250px;
 }
 
-.footer-list ul { columns: 2; }
-
-.footer-link { margin-block-end: 12px; }
-
-.footer .input-wrapper {
-  position: relative;
-  margin-block-end: 24px;
-}
-
-.footer .input-field {
-  padding: 12px;
-  padding-inline-start: 20px;
-  border-block-end: 1px solid var(--text-wild-blue-yonder);
-  font-size: var(--fontSize-6);
-}
-
-.footer .input-field::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.5;
-}
-
-.footer .input-wrapper ion-icon {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  --ionicon-stroke-width: 40px;
-}
 
 .footer-bottom {
   border-block-start: 1px solid var(--border-prussian-blue);
-  padding-block: 50px;
+  padding-block: 40px;
+  margin-top: -100px;
 }
 
 .copyright {
   text-align: center;
   margin-block-end: 15px;
+  font-size: 20px;
+  margin-left: 120px;
 }
 
 .copyright-link {
@@ -576,15 +544,171 @@ p {
 
 .social-link:is(:hover, :focus-visible) {
   color: var(--text-carolina-blue);
-  transform: translateY(-2px);
+  transform: translateY(-5px);
 }
 
 
 .icon {
   margin: 0 5px;
-  font-size: 45px;
+  font-size: 50px;
 }
 
+/* Estilos para o footer */
+.div {
+  
+  color: white;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.footer-left {
+  flex: 1; /* Ocupa o espaço disponível à esquerda */
+  text-align: left;
+}
+
+/* Estilos para o formulário */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+label{
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.input[type="email"] {
+  width: 400px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  border: 2px solid var(--bg-carolina-blue);
+  background-color: white;
+  
+}
+
+.submit {  
+  border: none;
+  border-radius: 10px;
+  padding: 7px 7px;
+  cursor: pointer;
+  background-image: var(--gradient-2);
+  background-size: 200%;
+  color: var(--white);
+  font-size: var(--fontSize-6);
+  font-weight: var(--weight-bold);
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transition: var(--transition-1);
+}
+
+button:hover {
+  background-color: #0056b3; /* Cor quando passa o mouse por cima */
+}
+
+/* Estilos responsivos para o footer */
+@media (max-width: 768px) {
+  .div {
+    flex-direction: column;
+  }
+
+  .footer-left {
+    text-align: center;
+    margin-bottom: 10px; /* Espaçamento inferior */
+  }
+
+  /* Outros estilos responsivos para o footer conforme necessário */
+
+  /* Estilos responsivos para o formulário */
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  label {
+    
+    margin-bottom: 5px;
+    
+  }
+
+  .input[type="email"] {
+    width: 250px;
+    margin-right: 0;
+    
+  }
+}
+
+/* Estilos para o footer */
+.d {
+  
+  color: white;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tags-column {
+  list-style-type: none;
+  padding: 0;
+  margin: 40px;
+  margin-left: 70px;
+  
+}
+
+.tags-column li {
+  margin-bottom: 10px; /* Espaçamento vertical entre as tags */
+  cursor: pointer;
+  transition: color 0.3s;
+  font-size: 20px;
+}
+
+.tags-column li:hover {
+  color: #007bff; /* Cor quando passa o mouse por cima */
+}
+
+/* Estilos responsivos para o footer */
+@media (max-width: 768px) {
+  .d {
+    flex-direction: row;
+  }
+
+  .logomay{
+    margin-left: -10px;
+  }
+
+  
+
+  .tags-column{
+    margin: 20px;
+    margin-top: 45px;
+    text-align: left;
+  }
+  
+  .tags-column li {
+    margin-bottom: 5px; /* Espaçamento vertical menor entre as tags */
+    font-size: 18px;
+  }
+  .footer-bottom {
+    
+     
+      padding-block: 50px;
+      margin-top: -25px;
+  }
+  .copyright{
+    margin-left: 20px;
+  }
+  .copyright-link{
+    margin-left: 70px;
+  }
+}
 
 
 
@@ -764,7 +888,7 @@ h3:hover {
   }
 
   .navbar-right {
-    margin-right: 10px;
+    margin-right: 30px;
     height: 10px;
   }
 
