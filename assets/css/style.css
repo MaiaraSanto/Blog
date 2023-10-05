@@ -1033,7 +1033,7 @@ button:hover {
   }
 
   .tags-column{
-    margin: 20px;
+    margin: 19px;
     margin-top: 45px;
     text-align: left;
   }
@@ -1051,6 +1051,9 @@ button:hover {
 
   .copyright{
     margin-top: -25px;
+  }
+  .logomay{
+    margin-left: -2px;
   }
 }
 
