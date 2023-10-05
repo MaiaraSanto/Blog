@@ -239,6 +239,13 @@ body.nav-active { overflow: hidden; }
   margin-right: 100px;
 }
 
+.btn-primary1 {
+  padding: 8px 16px;
+  border-radius: var(--radius-6);
+  margin-right: 100px;
+
+}
+
 .btn-secondary {
   padding: 18px 30px;
   border-radius: var(--radius-pill);
