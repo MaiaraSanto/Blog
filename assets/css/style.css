@@ -795,7 +795,7 @@ body.nav-active { overflow: hidden; }
   background-image: linear-gradient(var(--bg-oxford-blue), var(--bg-oxford-blue)), var(--gradient-1);
   background-clip: padding-box, border-box;
   border-color: transparent;
-  transform: translateY(-2px);
+  transform: translateY(-10px);
   transition: var(--transition-1);
   
 }
@@ -1009,13 +1009,14 @@ button:hover {
 
 /* Estilos responsivos para o footer */
 @media (max-width: 768px) {
-  footer {
-    flex-direction: column;
+  .d {
+    flex-direction: row;
   }
 
   .tags-column{
     margin: 20px;
     margin-top: 45px;
+    text-align: left;
   }
   
   .tags-column li {
@@ -1025,8 +1026,12 @@ button:hover {
   .footer-bottom {
     
      
-      padding-block: 40px;
+      padding-block: 50px;
       margin-top: -25px;
+  }
+
+  .copyright{
+    margin-top: -25px;
   }
 }
 
