@@ -652,7 +652,7 @@ button:hover {
 
   .input[type="email"] {
     width: 250px;
-    margin-right: 0;
+    margin-right: 6px;
     
   }
 }
@@ -693,13 +693,13 @@ button:hover {
   }
 
   .logomay{
-    margin-left: -10px;
+    margin-left: -15px;
   }
 
   
 
   .tags-column{
-    margin: 20px;
+    margin: 18px;
     margin-top: 45px;
     text-align: left;
   }
@@ -818,7 +818,7 @@ h3:hover {
     margin-left: 30px;
     text-align: center;
     opacity: 0;
-   
+    margin-bottom: 90px;
   }
 
   .mobile-menu {
