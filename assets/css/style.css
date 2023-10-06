@@ -343,7 +343,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .nav-list li {
-  margin-right: 90px;
+  margin-right: 105px;
 }
 
 /* Estilos para os itens de navegação */
@@ -430,6 +430,7 @@ body.nav-active { overflow: hidden; }
     margin-left: 90px;
  text-align: center;
     opacity: 0;
+    margin-bottom: 90px;
   }
   .mobile-menu{
     display: block;
