@@ -26,7 +26,7 @@
 
 ### Demo Screeshots
 
-![Wren Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+![MaiaraSanto Desktop Demo](./readme-images/desktop.png "Desktop Demo")
 
 ### Pré-requisitos
 
