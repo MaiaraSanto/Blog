@@ -23,7 +23,7 @@
 
 <br />
 
-### Demo Screeshots  [➥ clique aqui para acessar o Blog](https://https://mayblogger.netlify.app)
+### Demo Screeshots  [➥ clique aqui para acessar o Blog](https://mayblogger.netlify.app) 
 
 ***
    
