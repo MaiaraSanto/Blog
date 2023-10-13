@@ -31,7 +31,7 @@
    
 
    ***
-   Carrossel com os banners <a href="https://https://mayblogger.netlify.app/" align="center"><strong align="center">➥</strong></a>
+   Carrossel com os banners <a href="https://https://mayblogger.netlify.app/"><strong>➥</strong></a>
    
    #
    <img src="./2.gif" align="center" height="500em" width="100%"> 
