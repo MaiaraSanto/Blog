@@ -26,7 +26,7 @@
 
 ### Demo Screeshots
 
-![MaiaraSanto Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+![MaiaraSanto Desktop Demo](src="./1.gif")
 
 ### Pré-requisitos
 
