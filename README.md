@@ -34,11 +34,11 @@ Aqui será incluído os seguintes requisitos:
 
 * [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
 
-### Run Locally
+### Executar localmente
 
-To run **Wren** locally, run this command on your git bash:
+Para executar **Wren** localmente, execute este comando em seu git bash:
 
-Linux and macOS:
+Linux, macOS e Windows:
 
 ```bash
 sudo git clone https://github.com/codewithsadee/wren.git
@@ -49,11 +49,6 @@ Windows:
 ```bash
 git clone https://github.com/codewithsadee/wren.git
 ```
-
-### Contact
-
-If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
-
 ### License
 
 [MIT](https://choosealicense.com/licenses/mit/)
