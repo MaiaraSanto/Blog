@@ -23,7 +23,7 @@
 
 <br />
 
-### Demo Screeshots  <a href="https://https://mayblogger.netlify.app/" align="center"><strong align="center">➥ clique aqui</strong></a>
+### Demo Screeshots  <a href="https://https://mayblogger.netlify.app/" align="center"><strong align="center">➥ clique aqui para acessar o Blog</strong></a>
 
 ***
    
@@ -31,17 +31,24 @@
    
 
    ***
-   Carrossel com os banners
+   Carrossel com os banners <a href="https://https://mayblogger.netlify.app/" align="center"><strong align="center">➥</strong></a>
    
    #
    <img src="./2.gif" align="center" height="500em" width="100%"> 
    
    ***
    
-   Banners e suas respectivas páginas com números de views
+   Banners e suas respectivas páginas com números de views <a href="https://https://mayblogger.netlify.app/" align="center"><strong align="center">➥</strong></a>
 
    #
    <img src="./3.gif" align="center" height="500em" width="100%"> 
+   
+   ***
+
+   Cards com estilo <i>hover:</i> <a href="https://https://mayblogger.netlify.app/" align="center"><strong align="center">➥</strong></a>
+
+   #
+   <img src="./4.gif" align="center" height="500em" width="100%"> 
    
    ***
 
