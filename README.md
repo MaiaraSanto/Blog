@@ -31,6 +31,14 @@
    
    ***
 
+   ***
+   Carrossel
+   <img src="./2.gif" align="center" height="500em" width="100%"> 
+   
+   ***
+
+
+
 ### Pré-requisitos
 
 Aqui será incluído os seguintes requisitos:
