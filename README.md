@@ -26,7 +26,11 @@
 
 ### Demo Screeshots
 
-![MaiaraSanto Desktop Demo](src="./1.gif")
+***
+   
+   <img src="./1.gif" align="center" height="500em" width="100%"> 
+   
+   ***
 
 ### Pré-requisitos
 
