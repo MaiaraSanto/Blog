@@ -92,6 +92,7 @@
   --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
 
 }
+
 *,
 *::before,
 *::after {
@@ -100,20 +101,17 @@
   box-sizing: border-box;
 }
 
-li { list-style: none; }
+li {list-style: none}
 
 a,
-
-ion-icon { display: block; }
-
-
+ion-icon { display: block;}
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-img { height: auto; }
+img {height: auto;}
 
 input,
 button {
@@ -128,11 +126,11 @@ input {
   outline: none;
 }
 
-button { cursor: pointer; }
+button {cursor: pointer;}
 
-ion-icon { pointer-events: none; }
+ion-icon {pointer-events: none;}
 
-address { font-style: normal; }
+address { font-style: normal;}
 
 html {
   font-size: 10px;
@@ -148,12 +146,11 @@ body {
   overflow-y: overlay;
 }
 
+body.nav-active {overflow: hidden;}
 
-body.nav-active { overflow: hidden; }
+::-webkit-scrollbar { width: 5px;}
 
-::-webkit-scrollbar { width: 5px; }
-
-::-webkit-scrollbar-track { background-color: transparent; }
+::-webkit-scrollbar-track { background-color: transparent;}
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--bg-carolina-blue);
@@ -164,17 +161,17 @@ body.nav-active { overflow: hidden; }
   #REUSED STYLE
 \*-----------------------------------*/
 
-.container { padding-inline: 16px; }
+.container { padding-inline: 16px;}
 
 .hover-1,
-.hover-2 { transition: var(--transition-1); }
+.hover-2 {transition: var(--transition-1);}
 
-.hover-1:is(:hover, :focus-visible) { 
+.hover-1:is(:hover, :focus-visible) {
   color: var(--text-wild-blue-yonder);
   transform: translateX(3px);
 }
 
-.hover-2:is(:hover, :focus-visible) { color: var(--text-carolina-blue); }
+.hover-2:is(:hover, :focus-visible) {color: var(--text-carolina-blue);}
 
 .profile-card {
   display: flex;
@@ -182,57 +179,40 @@ body.nav-active { overflow: hidden; }
   gap: 10px;
 }
 
-.profile-card .profile-banner { border-radius: var(--radius-circle); }
+.profile-card .profile-banner { border-radius: var(--radius-circle);}
 
 .headline {
   color: var(--text-columbia-blue);
   line-height: var(--lineHeight-1);
 }
 
-.w-100 { width: 100%; }
+.w-100 {width: 100%;}
 
 .card {
   background-color: var(--bg-oxford-blue);
   border: 1px solid var(--border-prussian-blue);
 }
 
+.section { padding-block: var(--section-padding);}
 
+body { padding-top: 100px;}
 
-
-
-.section { padding-block: var(--section-padding); }
-
-
+/* Estilo para centralizar a logo (imagem) */
+img {
+  margin: 0 auto;
+  /* Isso centralizará horizontalmente a imagem */
+  display: block;
+  /* Isso garante que a imagem seja tratada como bloco para que a margem automática funcione corretamente */
+  height: auto;
+}
 
 /* Estilo para centralizar a logo e ajustar a margem esquerda */
 .logo {
   margin-left: 50px;
-  /* Ajuste conforme necessário para controlar a margem esquerda */
   margin-right: auto;
-  /* Centraliza horizontalmente a logo */
   display: block;
-  /* Define como um bloco para alinhar corretamente */
 }
 
-/* Estilo para centralizar o botão e ajustar a margem direita */
-.navbar-right {
-  margin-right: 100px;
-  /* Ajuste conforme necessário para controlar a margem direita */
-  margin-left: auto;
-  /* Centraliza horizontalmente o conteúdo */
-  display: flex;
-  /* Usar flexbox para alinhar verticalmente o conteúdo */
-  align-items: center;
-  /* Alinha verticalmente ao centro */
-  padding-top: 10px;
-}
-
-
-
-
-
-
-/* Estilos para a barra de navegação */
 .header {
   background-color: var(--bg-oxford-blue-2);
   padding: 20px 0;
@@ -248,15 +228,6 @@ body.nav-active { overflow: hidden; }
   z-index: 1000;
 }
 
-body {
-  padding-top: 100px;
-  /* Ajuste conforme necessário para evitar que o conteúdo seja ocultado pela barra de navegação */
-}
-
-/* Estilos para a logo */
-
-
-/* Estilos para a lista de navegação */
 .nav-list {
   list-style: none;
   padding: 0;
@@ -285,17 +256,15 @@ body {
   transform: translateX(3px);
 }
 
-.mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-  }
-  
-  .mobile-menu.active .line2 {
-    opacity: 0;
-  }
-  
-  .mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
-  }
+
+/* Estilo para centralizar o botão e ajustar a margem direita */
+.navbar-right {
+  margin-right: 100px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
 
 /* Estilos para o botão do menu */
 .nav-open-btn {
@@ -304,24 +273,8 @@ body {
   cursor: pointer;
 }
 
-/* Estilos para o botão "Return to blog" (removido) */
-.btn-primary {
-  display: none;
-}
-
-
-
-/* Estilo para centralizar a logo (imagem) */
-img {
-  margin: 0 auto;
-  /* Isso centralizará horizontalmente a imagem */
-  display: block;
-  /* Isso garante que a imagem seja tratada como bloco para que a margem automática funcione corretamente */
-  height: auto;
-}
-
-
-
+/* Estilos para o botão "Return to blog" */
+.btn-primary { display: none;}
 
 .btn {
   background-image: var(--gradient-2);
@@ -339,9 +292,7 @@ img {
   /* Isso centralizará horizontalmente a imagem */
 }
 
-.btn:is(:hover, :focus-visible) {
-  background-position: right;
-}
+.btn:is(:hover, :focus-visible) {background-position: right;}
 
 .btn-primary {
   padding: 8px 16px;
@@ -354,6 +305,178 @@ img {
 }
 
 
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+
+}
+
+.mobile-menu {
+  cursor: pointer;
+  display: none;
+}
+
+.nav-list.active {transform: translateX(0);}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {transform: rotate(-45deg) translate(-8px, 8px);}
+
+.mobile-menu.active .line2 {opacity: 0;}
+
+.mobile-menu.active .line3 {transform: rotate(45deg) translate(-5px, -7px);}
+
+h2 {
+  font-size: clamp(2rem, 2.5vw, 4rem);
+  font-weight: 800;
+  line-height: 1;
+  text-align: left;
+  margin-left: 20px;
+  /* Ajuste conforme necessário */
+}
+
+h2:hover {
+  transform: translateY(-5px);
+  color: var(--text-carolina-blue);
+  border-color: var(--text-carolina-blue);
+  transform: translateY(-2px);
+  transition: var(--transition-1);
+
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  /* Espaço entre a imagem e o conteúdo */
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: -20px;
+
+  /* Espaço entre a imagem e o título */
+}
+
+.profile-banner {
+  border-radius: var(--radius-circle);
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-weight: 100;
+  line-height: 1;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  /* Espaço entre "Mayarah Santos" e o conteúdo abaixo */
+}
+
+.card-title {
+  font-style: italic;
+  margin: 0;
+  /* Remova a margem padrão */
+  margin-bottom: 3px;
+  margin-top: -15px;
+  margin-left: 5px;
+}
+
+.date,
+.views {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  /* Espaço entre as datas e as visualizações */
+  margin-bottom: 8px;
+}
+
+#post-date {
+
+  font-weight: 100;
+  line-height: 1;
+  text-align: left;
+  margin-right: 10px;
+}
+
+h1,
+h2,
+#post-date,
+h3,
+p {
+  color: var(--text-white);
+}
+
+#post-date:hover {
+
+  color: var(--text-carolina-blue);
+  transform: translateY(-2px);
+  transition: var(--transition-1);
+}
+
+.views h3 {
+  font-size: clamp(1rem, 2vw, 2rem);
+  /* Use a mesma fonte e tamanho */
+  font-weight: 100;
+  line-height: 1;
+  text-align: left;
+  margin: 0;
+  /* Remova a margem padrão */
+  margin-left: 1px;
+  /* Espaço entre "Views" e "0 Views" */
+  margin-bottom: 2px;
+
+}
+
+h3:hover {
+
+  color: var(--text-carolina-blue);
+  transform: translateY(-2px);
+  transition: var(--transition-1);
+}
+
+#view-count {
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-weight: 100;
+  line-height: 1;
+  text-align: left;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 5vw, 5.2rem);
+  font-weight: 300;
+  line-height: 1;
+  text-align: center;
+  margin-left: 120px;
+  /* Ajuste conforme necessário */
+  margin-right: 120px
+}
+
+h1:hover {
+  transform: translateY(-5px);
+  color: var(--text-carolina-blue);
+  border-color: var(--text-carolina-blue);
+  transform: translateY(-2px);
+  transition: var(--transition-1);
+
+}
 
 .feature-card {
   padding: 1px;
@@ -373,129 +496,17 @@ img {
 
 }
 
-
-h1,
-h2,
-#post-date,
-h3,
-p {
-  color: var(--text-white);
-}
-
-h1 {
-  font-size: clamp(3.2rem, 5vw, 5.2rem);
-  font-weight: 300;
-  line-height: 1;
-  text-align: center;
-  margin-left: 120px;
-  /* Ajuste conforme necessário */
-  margin-right: 120px
-}
-
-h2 {
-  font-size: clamp(2rem, 2.5vw, 4rem);
-  font-weight: 800;
-  line-height: 1;
-  text-align: left;
-  margin-left: 20px;
-  /* Ajuste conforme necessário */
-}
-
-
-h2:hover {
-  transform: translateY(-5px);
-  color: var(--text-carolina-blue);
-
-  border-color: var(--text-carolina-blue);
-  transform: translateY(-2px);
-  transition: var(--transition-1);
-
-}
-
-h1:hover {
-  transform: translateY(-5px);
-  color: var(--text-carolina-blue);
-
-  border-color: var(--text-carolina-blue);
-  transform: translateY(-2px);
-  transition: var(--transition-1);
-
-}
-
-
-
 /* Centralizar e justificar texto e adicionar espaçamento entre parágrafos */
 p {
   text-align: justify;
   text-align-last: left;
   margin-bottom: 10px;
-  /* Espaçamento entre parágrafos */
   margin-left: 180px;
-  /* Ajuste conforme necessário */
   margin-right: 180px;
   line-height: 3rem;
   overflow-wrap: anywhere;
   overflow-wrap: break-word;
   word-spacing: normal !important;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-  /* Espaço entre a imagem e o conteúdo */
-}
-
-.profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: -20px;
-  
-  /* Espaço entre a imagem e o título */
-}
-
-.profile-banner {
-  border-radius: var(--radius-circle);
-  font-size: clamp(1rem, 2vw, 2rem);
-  font-weight: 100;
-  line-height: 1;
-  text-align: center;
-  border: 2px solid black;
-}
-
-.card-title {
-  font-style: italic;
-  margin: 0;
-  /* Remova a margem padrão */
-  margin-bottom: 3px;
-  margin-top: -15px;
-  margin-left: 5px;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  margin-top: 25px;
-  /* Espaço entre "Mayarah Santos" e o conteúdo abaixo */
-}
-
-.date,
-.views {
-  display: flex;
-  align-items: center;
-  margin-left: 5px;
-  /* Espaço entre as datas e as visualizações */
-  margin-bottom: 8px;
-}
-
-#post-date {
-
-  font-weight: 100;
-  line-height: 1;
-  text-align: left;
-
-  margin-right: 10px;
 }
 
 /*-----------------------------------*\
@@ -507,25 +518,101 @@ p {
   border-radius: var(--radius-48);
   color: var(--text-wild-blue-yonder);
   margin-block-end: 24px;
- margin-top: -100px;
+  margin-top: -100px;
 }
 
-.footer-top {
-  display: grid;
-  
+.footer-top {display: grid;}
+
+.logomay {margin-left: -250px;}
+
+.d {
+
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  flex: 1;
+  /* Ocupa o espaço disponível à esquerda */
+  text-align: left;
 }
 
 
-.logomay{
-  margin-left: -250px;
+.tags-column {
+  list-style-type: none;
+  padding: 0;
+  margin: 40px;
+  margin-left: 70px;
+
 }
 
+.tags-column li {
+  margin-bottom: 10px;
+  /* Espaçamento vertical entre as tags */
+  cursor: pointer;
+  transition: color 0.3s;
+  font-size: 20px;
+}
+
+.tags-column li:hover {color: #007bff;}
+
+.div {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+/* Estilos para o formulário */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.input[type="email"] {
+  width: 400px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  border: 2px solid var(--bg-carolina-blue);
+  background-color: white;
+
+}
+
+.submit {
+  border: none;
+  border-radius: 10px;
+  padding: 7px 7px;
+  cursor: pointer;
+  background-image: var(--gradient-2);
+  background-size: 200%;
+  color: var(--white);
+  font-size: var(--fontSize-6);
+  font-weight: var(--weight-bold);
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transition: var(--transition-1);
+}
 
 .footer-bottom {
   border-block-start: 1px solid var(--border-prussian-blue);
   padding-block: 40px;
   margin-top: -100px;
 }
+
+button:hover {background-color: #0056b3;}
 
 .copyright {
   text-align: center;
@@ -559,246 +646,54 @@ p {
   transform: translateY(-5px);
 }
 
-
 .icon {
   margin: 0 5px;
   font-size: 50px;
 }
 
-/* Estilos para o footer */
-.div {
-  
-  color: white;
-  
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-}
-
-.footer-left {
-  flex: 1; /* Ocupa o espaço disponível à esquerda */
-  text-align: left;
-}
-
-/* Estilos para o formulário */
-form {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-label{
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
-.input[type="email"] {
-  width: 400px;
+.back-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
   height: 50px;
-  padding: 5px;
-  border-radius: 15px;
-  margin-bottom: 10px;
-  border: 2px solid var(--bg-carolina-blue);
-  background-color: white;
-  
-}
-
-.submit {  
-  border: none;
-  border-radius: 10px;
-  padding: 7px 7px;
-  cursor: pointer;
-  background-image: var(--gradient-2);
-  background-size: 200%;
+  background-color: var(--bg-prussian-blue);
   color: var(--white);
-  font-size: var(--fontSize-6);
-  font-weight: var(--weight-bold);
-  max-width: max-content;
-  display: flex;
-  align-items: center;
-  gap: 3px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-circle);
+  border: 3px solid var(--bg-carolina-blue);
   transition: var(--transition-1);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 4;
 }
 
-button:hover {
-  background-color: #0056b3; /* Cor quando passa o mouse por cima */
+.back-top-btn:is(:hover, :focus-visible) {box-shadow: var(--shadow-2);}
+
+.back-top-btn.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-10px);
 }
 
-/* Estilos responsivos para o footer */
-@media (max-width: 768px) {
-  .div {
-    flex-direction: column;
-  }
-
-  .footer-left {
-    text-align: center;
-    margin-bottom: 10px; /* Espaçamento inferior */
-  }
-
-  /* Outros estilos responsivos para o footer conforme necessário */
-
-  /* Estilos responsivos para o formulário */
-  form {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  label {
-    
-    margin-bottom: 5px;
-    
-  }
-
-  .input[type="email"] {
-    width: 250px;
-    margin-right: 6px;
-    
-  }
-}
-
-/* Estilos para o footer */
-.d {
-  
-  color: white;
-  
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.tags-column {
-  list-style-type: none;
-  padding: 0;
-  margin: 40px;
-  margin-left: 70px;
-  
-}
-
-.tags-column li {
-  margin-bottom: 10px; /* Espaçamento vertical entre as tags */
-  cursor: pointer;
-  transition: color 0.3s;
-  font-size: 20px;
-}
-
-.tags-column li:hover {
-  color: #007bff; /* Cor quando passa o mouse por cima */
-}
-
-/* Estilos responsivos para o footer */
-@media (max-width: 768px) {
-  .d {
-    flex-direction: row;
-  }
-
-  .logomay{
-    margin-left: -15px;
-  }
-
-  
-
-  .tags-column{
-    margin: 18px;
-    margin-top: 45px;
-    text-align: left;
-  }
-  
-  .tags-column li {
-    margin-bottom: 5px; /* Espaçamento vertical menor entre as tags */
-    font-size: 18px;
-  }
-  .footer-bottom {
-    
-     
-      padding-block: 50px;
-      margin-top: -25px;
-  }
-  .copyright{
-    margin-left: 20px;
-  }
-  .copyright-link{
-    margin-left: 70px;
-  }
-}
-
-
-
-#view-count {
-  font-size: clamp(1rem, 2vw, 2rem);
-  font-weight: 100;
-  line-height: 1;
-  text-align: left;
-  margin-right: 10px;
-  margin-left: 5px;
-}
-
-.views h3 {
-  font-size: clamp(1rem, 2vw, 2rem);
-  /* Use a mesma fonte e tamanho */
-  font-weight: 100;
-  line-height: 1;
-  text-align: left;
-  margin: 0;
-  /* Remova a margem padrão */
-  margin-left: 1px;
-  /* Espaço entre "Views" e "0 Views" */
-  margin-bottom: 2px;
-
-}
-
-h3:hover {
-
-  color: var(--text-carolina-blue);
-  transform: translateY(-2px);
-  transition: var(--transition-1);
-}
-
-#post-date:hover {
-
-  color: var(--text-carolina-blue);
-
-  transform: translateY(-2px);
-  transition: var(--transition-1);
-}
-
-
-
-
-.mobile-menu div {
-  width: 32px;
-  height: 2px;
-  background: #fff;
-  margin: 8px;
-
-}
-
-.mobile-menu {
-  cursor: pointer;
-  display: none;
-}
-
-.nav-list.active {
-  transform: translateX(0);
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
 
 @media (max-width: 768px) {
 
-  body {
-    overflow-x: hidden;
+  body {overflow-x: hidden;}
+
+  .logo {
+    width: auto;
+    /* Remova a largura fixa para que o logotipo se ajuste automaticamente */
+    height: 30px;
+    /* Defina uma altura desejada para o logotipo na versão responsiva */
+    margin-left: 10px;
   }
+
+  .logomay { margin-left: -10px;}
 
   .nav-list {
     position: absolute;
@@ -821,6 +716,17 @@ h3:hover {
     margin-bottom: 90px;
   }
 
+  .navbar-right {
+    margin-right: 15px;
+    height: 10px;
+  }
+
+  .btn-primary {
+    padding: 8px 8px;
+    border-radius: var(--radius-pill);
+
+  }
+
   .mobile-menu {
     display: block;
     margin-right: 10px;
@@ -828,40 +734,6 @@ h3:hover {
     margin-top: 9px;
   }
 
-}
-
-.back-top-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: var(--bg-prussian-blue);
-  color: var(--white);
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius-circle);
-  border: 3px solid var(--bg-carolina-blue);
-  transition: var(--transition-1);
-  visibility: hidden;
-  opacity: 0;
-  z-index: 4;
-}
-
-.back-top-btn:is(:hover, :focus-visible) {
-  box-shadow: var(--shadow-2);
-}
-
-.back-top-btn.active {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(-10px);
-}
-
-
-@media (max-width: 768px) {
-
-  /* Estilos CSS para responsivo */
   .post-title-container {
     text-align: center;
     /* Centraliza o título */
@@ -871,48 +743,9 @@ h3:hover {
 
   .post-content img {
     max-width: 90%;
-    /* Torna a imagem responsiva */
     height: auto;
     margin-top: -20px;
 
-  }
-
-  
-
-}
-
-
-
-/* Estilos para telas menores (por exemplo, telas menores que 768px) */
-@media screen and (max-width: 768px) {
-  .logo {
-    width: auto;
-    /* Remova a largura fixa para que o logotipo se ajuste automaticamente */
-    height: 30px;
-    /* Defina uma altura desejada para o logotipo na versão responsiva */
-    margin-left: 10px;
-  }
-
-  .btn-primary {
-    padding: 8px 8px;
-    border-radius: var(--radius-pill);
-
-  }
-
-  .navbar-right {
-    margin-right: 15px;
-    height: 10px;
-  }
-
-  h1 {
-    font-size: 24px;
-    /* Tamanho da fonte do título */
-    text-align: center !important;
-    /* Alinhamento centralizado com !important para priorizar */
-    margin: 0;
-    /* Remover margem padrão para evitar espaçamento extra */
-    white-space: nowrap;
-    /* Impede a quebra de texto em várias linhas */
   }
 
   .views h3 {
@@ -926,9 +759,19 @@ h3:hover {
     font-weight: 100;
   }
 
+  h1 {
+    font-size: 24px;
+    /* Tamanho da fonte do título */
+    text-align: center !important;
+    /* Alinhamento centralizado com !important para priorizar */
+    margin: 0;
+    /* Remover margem padrão para evitar espaçamento extra */
+    white-space: nowrap;
+    /* Impede a quebra de texto em várias linhas */
+  }
+
   p {
     text-align: justify;
-
     margin-left: 20px;
     /* Ajuste a margem esquerda conforme necessário para telas menores */
     margin-right: 20px;
@@ -941,6 +784,50 @@ h3:hover {
     overflow-wrap: anywhere;
 
   }
+
+  .footer-bottom {
+    padding-block: 50px;
+    margin-top: -25px;
+  }
+
+  .d {flex-direction: row;}
+
+  .tags-column {
+    margin: 18px;
+    margin-top: 45px;
+    text-align: left;
+  }
+
+  .tags-column li {
+    margin-bottom: 5px;
+    /* Espaçamento vertical menor entre as tags */
+    font-size: 18px;
+  }
+
+  .div {flex-direction: column;}
+
+  .footer-left {
+    text-align: center;
+    margin-bottom: 10px;
+    /* Espaçamento inferior */
+  }
+
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  label {margin-bottom: 5px;}
+
+  .input[type="email"] {
+    width: 250px;
+    margin-right: 6px;
+
+  }
+
+  .copyright {margin-left: 20px;}
+
+  .copyright-link {margin-left: 70px;}
 
 }
 
@@ -968,22 +855,15 @@ h3:hover {
 
   }
 
-
-
   /**
    * REUSED STYLE
    */
 
-  
-
-  .headline-3 { --fontSize-2: 2.4rem; }
-
-
-
-
-
+  .headline-3 {--fontSize-2: 2.4rem;
+}
 
 }
+
 /**
  * responsive for large than 768px screen
  */
@@ -1006,22 +886,13 @@ h3:hover {
 
   }
 
-
-
   /**
    * REUSED STYLE
    */
 
-  .container { max-width: 720px; }
+  .container {max-width: 720px;}
 
-
-
-  
 }
-
-
-
-
 
 /**
  * responsive for large than 992px screen
@@ -1033,29 +904,22 @@ h3:hover {
    * REUSED STYLE
    */
 
-  .container { max-width: 930px; }
+  .container {max-width: 930px;}
 
-
-
-  
   /**
    * FOOTER
    */
 
-  .footer-top { grid-template-columns: repeat(3, 1fr); }
+  .footer-top {grid-template-columns: repeat(3, 1fr);}
 
   .footer-bottom {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .copyright { margin-block-end: 0; }
+  .copyright {margin-block-end: 0;}
 
 }
-
-
-
-
 
 /**
  * responsive for large than 1200px screen
@@ -1067,17 +931,10 @@ h3:hover {
    * REUSED STYLE
    */
 
-  .container { max-width: 1140px; }
+  .container { max-width: 1140px;}
 
-  body.nav-active { overflow-y: overlay; }
+  body.nav-active {overflow-y: overlay;}
 
-
-
-  /**
-   * HEADER
-   */
-
-  
   /**
    * FOOTER
    */
