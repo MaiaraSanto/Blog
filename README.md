@@ -29,11 +29,19 @@
    
    <img src="./1.gif" align="center" height="500em" width="100%"> 
    
-   ***
 
    ***
-   Carrossel
+   Carrossel com os banners
+   
+   #
    <img src="./2.gif" align="center" height="500em" width="100%"> 
+   
+   ***
+   
+   Banners e suas respectivas páginas com números de views
+
+   #
+   <img src="./3.gif" align="center" height="500em" width="100%"> 
    
    ***
 
