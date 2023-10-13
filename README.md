@@ -31,35 +31,35 @@
    
 
    ***
-   Carrossel com os banners <a href="https://https://mayblogger.netlify.app"><strong>➥</strong></a>
+   Carrossel com os banners  [➥](https://mayblogger.netlify.app) 
    
    #
    <img src="./2.gif" align="center" height="500em" width="100%"> 
    
    ***
    
-   Banners e suas respectivas páginas com números de views <a href="https://https://mayblogger.netlify.app/" align="center"><strong align="center">➥</strong></a>
+   Banners e suas respectivas páginas com números de views [➥](https://mayblogger.netlify.app) 
 
    #
    <img src="./3.gif" align="center" height="500em" width="100%"> 
    
    ***
 
-   Cards com estilo <i>hover:</i> <a href="https://https://mayblogger.netlify.app/" align="center"><strong align="center">➥</strong></a>
+   Cards com estilo <i>hover:</i> [➥](https://mayblogger.netlify.app) 
 
    #
    <img src="./4.gif" align="center" height="500em" width="100%"> 
    
    ***
 
-Buttom com as principais tags em TI e posts recentes <i>hover:</i> <a href="https://https://mayblogger.netlify.app/" align="center"><strong align="center">➥</strong></a>
+Buttom com as principais tags em TI e posts recentes <i>hover:</i> [➥](https://mayblogger.netlify.app) 
 
    #
    <img src="./5.gif" align="center" height="500em" width="100%"> 
    
    ***
 
-   Estilo responsivo em telas diferentes <i>hover:</i> <a href="https://https://mayblogger.netlify.app/" align="center"><strong align="center">➥</strong></a>
+   Estilo responsivo em telas diferentes <i>hover:</i> [➥](https://mayblogger.netlify.app) 
 
    #
    <img src="./6.gif" align="center" height="500em" width="100%"> 
