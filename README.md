@@ -18,7 +18,7 @@
  ### A página inicial também deve possuir uma barra de navegação contendo o nome ou logo do blog e um filtro de postagens por categoria (utilize no máximo 4 categorias diferentes predefinidas). Ao clicar sobre uma categoria, apenas as postagens referentes a categoria escolhida devem ser exibidas. <br/>
  ### A página de visualização do post deve exibir a postagem completa com todas as suas informações. Ela também deve conter uma barra de navegação contendo um link para a página de postagens que ao ser clicado, retorna para ela.
 
-  <a href="https://codewithsadee.github.io/wren/"><strong>➥ Live Demo</strong></a>
+  <a href="https://https://mayblogger.netlify.app/"><strong>➥ Live Demo</strong></a>
 
 </div>
 
@@ -28,9 +28,9 @@
 
 ![Wren Desktop Demo](./readme-images/desktop.png "Desktop Demo")
 
-### Prerequisites
+### Pré-requisitos
 
-Before you begin, ensure you have met the following requirements:
+Aqui será incluído os seguintes requisitos:
 
 * [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
 
