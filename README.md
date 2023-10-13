@@ -52,6 +52,13 @@
    
    ***
 
+Buttom com as principais tags em TI e posts recentes <i>hover:</i> <a href="https://https://mayblogger.netlify.app/" align="center"><strong align="center">➥</strong></a>
+
+   #
+   <img src="./5.gif" align="center" height="500em" width="100%"> 
+   
+   ***
+
 
 
 ### Pré-requisitos
