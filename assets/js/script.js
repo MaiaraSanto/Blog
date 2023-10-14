@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 /**
  * Add event listener on multiple elements
  */
@@ -11,8 +9,6 @@ const addEventOnElements = function (elements, eventType, callback) {
     elements[i].addEventListener(eventType, callback);
   }
 }
-
-
 
 /**
  * MOBILE NAVBAR TOGGLER
@@ -35,7 +31,7 @@ class MobileNavbar {
         ? (link.style.animation = "")
         : (link.style.animation = `navLinkFade 0.5s ease forwards ${
             index / 7 + 0.3
-          }s`);
+         }s`);
     });
   }
 
@@ -66,7 +62,6 @@ const mobileNavbar = new MobileNavbar(
 );
 mobileNavbar.init();
 
-
 /**
  * HEADER ANIMATION
  * When scrolled donw to 100px header will be active
@@ -84,8 +79,6 @@ window.addEventListener("scroll", () => {
     backTopBtn.classList.remove("active");
   }
 });
-
-
 
 /**
  * SLIDER
@@ -202,8 +195,6 @@ function displayCurrentDate() {
 window.addEventListener('load', function () {
   displayCurrentDate();
 });
-
-
 
 // Função para exibir a data atual nos cards
 function displayCurrentDateInCards() {
