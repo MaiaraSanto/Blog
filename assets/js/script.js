@@ -208,3 +208,7 @@ function displayCurrentDateInCards() {
   }
 }
 
+// Chama a função para exibir a data atual nos cards ao carregar a página
+window.addEventListener('load', function () {
+  displayCurrentDateInCards();
+});
