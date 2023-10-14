@@ -77,18 +77,18 @@ Aqui será incluído os seguintes requisitos:
 
 ### Executar localmente
 
-Para executar **Wren** localmente, execute este comando em seu git bash:
+Para executar  localmente, execute este comando em seu git bash:
 
 Linux, macOS e Windows:
 
 ```bash
-sudo git clone https://github.com/codewithsadee/wren.git
+sudo git clone https://github.com/MaiaraSanto/Blog-StackX.git
 ```
 
 Windows:
 
 ```bash
-git clone https://github.com/codewithsadee/wren.git
+git clone https://github.com/MaiaraSanto/Blog-StackX.git
 ```
 ### Desenvolvido com HTML, CSS e JS.
 <div style="display: inline_block" >
