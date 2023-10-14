@@ -59,7 +59,7 @@ Buttom com as principais tags em TI e posts recentes <i>hover:</i> [➥](https:/
    
    ***
 
-   Estilo responsivo em telas diferentes <i>hover:</i> [➥](https://mayblogger.netlify.app) 
+   Estilo responsivo em telas diferentes  [➥](https://mayblogger.netlify.app) 
 
    #
    <img src="./6.gif" align="center" height="500em" width="100%"> 
