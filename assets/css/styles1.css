@@ -685,6 +685,8 @@ button:hover {background-color: #0056b3;}
 
   body {overflow-x: hidden;}
 
+  .contact{ margin-top: -138px;}
+
   .logo {
     width: auto;
     /* Remova a largura fixa para que o logotipo se ajuste automaticamente */
