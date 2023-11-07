@@ -213,6 +213,4 @@ window.addEventListener('load', function () {
   displayCurrentDateInCards();
 });
 
-// Exibe o número de visualizações
-displayViewCount(postId);
 
