@@ -18,9 +18,8 @@ function displayCurrentDate() {
 window.addEventListener('load', function () {
     displayCurrentDate();
 });
- 
- 
- // Função para obter o número atual de visualizações do localStorage
+
+// Função para obter o número atual de visualizações do localStorage
 function getViewCount(postId) {
     const storedCounts = localStorage.getItem('viewCounts');
     if (storedCounts) {
@@ -91,7 +90,6 @@ updateViewCount();
 function goBack() {
     history.back();
 }
-// ...
 
 const urlParams = new URLSearchParams(window.location.search);
 const theme = urlParams.get('theme');
@@ -154,4 +152,38 @@ if (theme) {
     }
 }
 
+const themeToContentMap = {
+    'Cyber': 'cyber-content',
+    'Figma': 'figma-content',
+    'Figma': 'figma-content',
+    'Scrum': 'scrum-content',
+    'GPS': 'gps-content',
+    'LGPD': 'lgpd-content',
+    'Front-end': 'frontend-content',
+    'Back-end': 'backend-content',
+    'Tecnologia': 'tecnologia-content',
+    'Data%20Science': 'datascience-content',
+    'Redes': 'redes-content',
+    'Internet': 'internet-content',
+    'IA': 'ia-content',
+    'Mobile': 'mobile-content',
+    'Trabalho': 'trabalho-content',
+    'Codigo': 'codigo-content',
+    'Remoto': 'remoto-content',
+    'Grupo': 'grupo-content',
+    'Salario': 'salario-content'
+};
+
+const postId = themeToContentMap[theme];
+
+// Exibe o número de visualizações
+displayViewCount(postId);
+
+// Função para zerar os números de visualizações no localStorage
+function resetViewCounts() {
+    localStorage.removeItem('viewCounts');
+}
+
+// Chama a função para zerar as visualizações (pode ser chamada quando necessário)
+resetViewCounts();
 
