@@ -179,3 +179,13 @@ const postId = themeToContentMap[theme];
 // Exibe o número de visualizações
 displayViewCount(postId);
 
+// Função para zerar os números de visualizações no localStorage
+function resetViewCounts() {
+    localStorage.removeItem('viewCounts');
+}
+
+// Chama a função para zerar as visualizações (pode ser chamada quando necessário)
+resetViewCounts();
+
+
+
